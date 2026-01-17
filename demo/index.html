@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Withings Design System — Complete Component Library</title>
+  
+  <!-- CSS Variables & Theme -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/demo-layout.css">
+  
+  <!-- Foundation -->
+  <link rel="stylesheet" href="css/foundation.css">
+  
+  <!-- Typography -->
+  <link rel="stylesheet" href="css/typography.css">
+  
+  <!-- Layout -->
+  <link rel="stylesheet" href="css/layout.css">
+  
+  <!-- Navigation -->
+  <link rel="stylesheet" href="css/navigation.css">
+  
+  <!-- Forms -->
+  <link rel="stylesheet" href="css/forms.css">
+  
+  <!-- Buttons -->
+  <link rel="stylesheet" href="css/buttons.css">
+  
+  <!-- Progress -->
+  <link rel="stylesheet" href="css/progress.css">
+  
+  <!-- Lists -->
+  <link rel="stylesheet" href="css/lists.css">
+  
+  <!-- Cards -->
+  <link rel="stylesheet" href="css/cards.css">
+  
+  <!-- Charts -->
+  <link rel="stylesheet" href="css/charts.css">
+  
+  <!-- Modals -->
+  <link rel="stylesheet" href="css/modals.css">
+  
+  <!-- Chat -->
+  <link rel="stylesheet" href="css/chat.css">
+  
+  <!-- Profile -->
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+  <div class="demo-container">
+    <!-- Header -->
+    <header class="demo-header">
+      <h1>Withings Design System</h1>
+      <p>"Soft Wellness" — Complete Component Library</p>
+    </header>
+
+    <!-- Component Grid -->
+    <div class="demo-grid">
+
+      <!-- ============================================================
+           AVATARS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Avatars</h2>
+        <div class="demo-row">
+          <div>
+            <div class="demo-label">Small (32px)</div>
+            <div class="avatar avatar--sm">KM</div>
+          </div>
+          <div>
+            <div class="demo-label">Medium (44px)</div>
+            <div class="avatar avatar--md">KM</div>
+          </div>
+          <div>
+            <div class="demo-label">Large (80px)</div>
+            <div class="avatar avatar--lg">KM</div>
+          </div>
+          <div>
+            <div class="demo-label">XL (150px)</div>
+            <div class="avatar avatar--xl">KA</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           BUTTONS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Buttons</h2>
+        <div class="demo-row">
+          <button class="btn btn--primary" style="width: auto;">
+            Book session
+          </button>
+        </div>
+        <div class="demo-row">
+          <button class="btn btn--secondary">Set Up</button>
+          <button class="btn btn--secondary">See all</button>
+          <button class="btn btn--secondary">Invite</button>
+        </div>
+        <div class="demo-row">
+          <button class="btn btn--icon">
+            <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </button>
+          <button class="btn btn--icon">
+            <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 4v16m8-8H4"/>
+            </svg>
+          </button>
+          <button class="btn btn--icon btn--icon-dark">
+            <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SEGMENTED CONTROL / SERVICE TABS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Segmented Control</h2>
+        <div class="demo-row">
+          <div class="segmented-control" style="width: 100%;">
+            <button class="segmented-control__item segmented-control__item--active">Doctor</button>
+            <button class="segmented-control__item">Psychologist</button>
+            <button class="segmented-control__item">Physio</button>
+          </div>
+        </div>
+        <div class="demo-spacer"></div>
+        <div class="demo-row">
+          <div class="segmented-control">
+            <button class="segmented-control__item segmented-control__item--active">Day</button>
+            <button class="segmented-control__item">Week</button>
+            <button class="segmented-control__item">Month</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           TOGGLE SWITCH
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Toggle Switch</h2>
+        <div class="demo-row">
+          <div>
+            <div class="demo-label">Off</div>
+            <div class="toggle">
+              <div class="toggle__thumb"></div>
+            </div>
+          </div>
+          <div>
+            <div class="demo-label">On</div>
+            <div class="toggle toggle--on">
+              <div class="toggle__thumb"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           BADGES
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Badges</h2>
+        <div class="demo-row">
+          <span class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            Covered
+          </span>
+          <div class="partner-badge">a</div>
+        </div>
+        <div class="demo-row">
+          <span class="badge badge--success">
+            <span class="badge__dot"></span>
+            Connected
+          </span>
+          <span class="badge badge--activity">Activity</span>
+          <span class="badge badge--body">Body</span>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PROGRESS BAR
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Progress Bar</h2>
+        <div class="demo-label">Step 1 of 3 (33%)</div>
+        <div class="progress-bar" style="margin-bottom: 16px;">
+          <div class="progress-bar__fill" style="width: 33%;"></div>
+        </div>
+        <div class="demo-label">Step 2 of 3 (66%)</div>
+        <div class="progress-bar" style="margin-bottom: 16px;">
+          <div class="progress-bar__fill" style="width: 66%;"></div>
+        </div>
+        <div class="demo-label">Complete (100%)</div>
+        <div class="progress-bar">
+          <div class="progress-bar__fill" style="width: 100%;"></div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           INFO ROWS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Info Rows</h2>
+        <div style="border-radius: var(--radius-lg); overflow: hidden;">
+          <div class="info-row">
+            <span class="info-row__label">Name</span>
+            <span class="info-row__value">Karl Martin Lind</span>
+          </div>
+          <div class="info-row">
+            <span class="info-row__label">Date of birth</span>
+            <span class="info-row__value">9/7/1979</span>
+          </div>
+          <div class="info-row">
+            <span class="info-row__label">Gender</span>
+            <span class="info-row__value">Male</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SETTINGS LIST ITEMS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Settings List Items</h2>
+        <div style="border-radius: var(--radius-lg); overflow: hidden;">
+          <div class="settings-item">
+            <div class="settings-item__icon settings-item__icon--activity">
+              <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+            <span class="settings-item__title">Payment methods</span>
+            <svg class="settings-item__chevron icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+          <div class="settings-item">
+            <div class="settings-item__icon settings-item__icon--body">
+              <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/>
+              </svg>
+            </div>
+            <span class="settings-item__title">Language</span>
+            <span class="settings-item__value">English</span>
+            <svg class="settings-item__chevron icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+          <div class="settings-item">
+            <div class="settings-item__icon settings-item__icon--heart">
+              <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 11c0 3.517-1.009 6.799-2.753 9.571"/>
+              </svg>
+            </div>
+            <span class="settings-item__title">Fingerprint or Face ID</span>
+            <div class="toggle toggle--on">
+              <div class="toggle__thumb"></div>
+            </div>
+            <svg class="settings-item__chevron icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SELECTION CARDS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Selection Cards</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="selection-card">
+            <div class="selection-card__icon" style="background: var(--color-heart-bg);">
+              <svg class="icon--sm" fill="none" stroke="var(--color-heart-text)" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="5"/>
+                <path d="M3 21v-2a7 7 0 0114 0v2"/>
+              </svg>
+            </div>
+            <div class="selection-card__content">
+              <div class="selection-card__title">Doctor Consultation</div>
+              <div class="selection-card__subtitle">Video consultation with a doctor</div>
+            </div>
+          </div>
+          <div class="selection-card">
+            <div class="selection-card__icon" style="background: var(--color-activity-bg);">
+              <svg class="icon--sm" fill="none" stroke="var(--color-activity-text)" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <div class="selection-card__content">
+              <div class="selection-card__title">Today at 5:46PM</div>
+              <div class="selection-card__subtitle">With doctor</div>
+            </div>
+            <button class="selection-card__action">
+              <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           DROPDOWN SELECT
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Dropdown Select</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="dropdown-select">
+            <span class="dropdown-select__label">All dates</span>
+            <svg class="dropdown-select__icon icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </div>
+          <div class="dropdown-select">
+            <span class="dropdown-select__label">All doctors</span>
+            <svg class="dropdown-select__icon icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           APPOINTMENT CARDS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Appointment Cards</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="appointment-card">
+            <img 
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop&crop=face" 
+              alt="Dr. Abdi" 
+              class="appointment-card__avatar"
+            />
+            <div class="appointment-card__content">
+              <div class="appointment-card__time">6:00PM</div>
+              <div class="appointment-card__doctor">Abdi Hafied Hirsi</div>
+            </div>
+            <svg class="appointment-card__chevron icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+          <div class="appointment-card">
+            <img 
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" 
+              alt="Dr. Hossein" 
+              class="appointment-card__avatar"
+            />
+            <div class="appointment-card__content">
+              <div class="appointment-card__time">6:15PM</div>
+              <div class="appointment-card__doctor">Hossein Schandiz</div>
+            </div>
+            <svg class="appointment-card__chevron icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           NAVIGATION HEADER
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Navigation Headers</h2>
+        <div style="background: var(--color-bg-primary); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 16px;">
+          <div class="nav-header nav-header--bordered">
+            <div class="nav-spacer"></div>
+            <span class="nav-title">Home</span>
+            <div class="nav-spacer"></div>
+          </div>
+        </div>
+        <div style="background: var(--color-bg-primary); border-radius: var(--radius-lg); overflow: hidden;">
+          <div class="nav-header">
+            <button class="nav-back">
+              <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+            </button>
+            <span class="nav-title">Select payment method</span>
+            <button class="nav-close">
+              <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar__fill" style="width: 66%;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           TAB BAR
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Tab Bar</h2>
+        <div class="tab-bar">
+          <button class="tab-bar__item tab-bar__item--active">
+            <svg class="tab-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <span class="tab-bar__label">Home</span>
+          </button>
+          <button class="tab-bar__item">
+            <span class="tab-bar__badge">141</span>
+            <svg class="tab-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+            <span class="tab-bar__label">Inbox</span>
+          </button>
+          <button class="tab-bar__item">
+            <svg class="tab-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="7" r="4"/>
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+            </svg>
+            <span class="tab-bar__label">My account</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CHAT / MESSAGING
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Chat / Messaging</h2>
+        <div class="chat-container">
+          <div class="chat-date">11/29/2023</div>
+          
+          <div class="message-row message-row--received">
+            <img 
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face" 
+              alt="Doctor" 
+              class="message-avatar"
+            />
+            <div class="message-bubble message-bubble--received">
+              Hei Karl Martin! Informerer at det ble sendt resept på influensa vaksine.
+              <div class="message-signature">Mvh, Aygul, lege Eyr.</div>
+            </div>
+          </div>
+
+          <div class="chat-date">11/30/2023</div>
+
+          <div class="message-row message-row--sent">
+            <div class="message-bubble message-bubble--sent">
+              Takk så mye Aygul! 😊
+            </div>
+          </div>
+
+        </div>
+
+        <h3 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Chat Input (Withings-style)</h3>
+        <div class="chat-input-wrapper">
+          <div class="chat-input">
+            <div class="chat-input__ai-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z" fill="#BE185D"/>
+                <path d="M18 14L18.545 16.455L21 17L18.545 17.545L18 20L17.455 17.545L15 17L17.455 16.455L18 14Z" fill="#BE185D"/>
+                <path d="M6 14L6.545 16.455L9 17L6.545 17.545L6 20L5.455 17.545L3 17L5.455 16.455L6 14Z" fill="#BE185D"/>
+              </svg>
+            </div>
+            <input type="text" class="chat-input__field" placeholder="Your message">
+            <button class="chat-input__send chat-input__send--disabled">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19V5M5 12l7-7 7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="chat-disclaimer">The insights provided do not constitute medical advice. In case of doubt, always consult a healthcare professional.</p>
+      </section>
+
+      <!-- ============================================================
+           FEATURE CARD
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Feature Card</h2>
+        <div class="card">
+          <div class="feature-card__image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=400&fit=crop" 
+              alt="Doctor consultation" 
+              class="feature-card__image"
+            />
+            <div class="feature-card__badges">
+              <span class="badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Covered
+              </span>
+              <div class="partner-badge">a</div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h2 class="feature-card__title">Doctor Consultation</h2>
+            <p class="feature-card__description">Video consultation with a doctor</p>
+            <button class="btn btn--primary">Book session</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           HERO CARD
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Hero Card (with overlay)</h2>
+        <div class="hero-card">
+          <img 
+            src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&h=500&fit=crop" 
+            alt="Family" 
+            class="hero-card__image"
+          />
+          <div class="hero-card__overlay"></div>
+          <div class="hero-card__content">
+            <h2 class="hero-card__title">How Eyr works</h2>
+            <p class="hero-card__subtitle">Learn about our offerings and services</p>
+            <button class="btn btn--secondary" style="background: var(--color-bg-secondary); border: none;">
+              Learn more
+              <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           METRIC CARD
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Metric Card</h2>
+        <div class="metric-card">
+          <div class="metric-card__header">
+            <svg class="icon--sm metric-card__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span class="metric-card__label">Daily Steps</span>
+            <span class="metric-card__time">17:06</span>
+            <svg class="icon--sm" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+            <div>
+              <div class="metric-card__value">6 343</div>
+              <div class="metric-card__subtitle">63 % Goal · 6 floors</div>
+            </div>
+            <div class="mini-chart">
+              <div class="mini-chart__bar" style="height: 20%;"></div>
+              <div class="mini-chart__bar" style="height: 10%;"></div>
+              <div class="mini-chart__bar" style="height: 30%;"></div>
+              <div class="mini-chart__bar" style="height: 50%;"></div>
+              <div class="mini-chart__bar" style="height: 90%;"></div>
+              <div class="mini-chart__bar" style="height: 70%;"></div>
+              <div class="mini-chart__bar" style="height: 40%;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CIRCULAR PROGRESS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Circular Progress</h2>
+        <div class="demo-row">
+          <div class="progress-circular" style="width: 80px; height: 80px;">
+            <svg width="80" height="80" style="transform: rotate(-90deg);">
+              <circle cx="40" cy="40" r="34" fill="none" stroke="var(--color-border-subtle)" stroke-width="6"/>
+              <circle cx="40" cy="40" r="34" fill="none" stroke="var(--color-brand-accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="79"/>
+            </svg>
+            <div class="progress-circular__content">
+              <div class="progress-circular__value">63%</div>
+              <div class="progress-circular__label">10 000</div>
+            </div>
+          </div>
+          <div class="progress-circular" style="width: 100px; height: 100px;">
+            <svg width="100" height="100" style="transform: rotate(-90deg);">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="var(--color-border-subtle)" stroke-width="6"/>
+              <circle cx="50" cy="50" r="44" fill="none" stroke="var(--color-brand-accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="69"/>
+            </svg>
+            <div class="progress-circular__content">
+              <div class="progress-circular__value" style="font-size: 28px;">75%</div>
+              <div class="progress-circular__label">Goal</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           COLOR PALETTE
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Color Palette</h2>
+        <div class="color-swatches">
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #F7F6F4;"></div>
+            <div class="color-swatch__label">Background</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #FFFFFF;"></div>
+            <div class="color-swatch__label">Surface</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #EDEBE8;"></div>
+            <div class="color-swatch__label">Elevated</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #2B3A67;"></div>
+            <div class="color-swatch__label">Brand</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #4A6CF7;"></div>
+            <div class="color-swatch__label">Accent</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #1A1A1A;"></div>
+            <div class="color-swatch__label">Primary</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #F9F3DC;"></div>
+            <div class="color-swatch__label">Activity</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #EDE4F3;"></div>
+            <div class="color-swatch__label">Body</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #FCE4EC;"></div>
+            <div class="color-swatch__label">Heart</div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__box" style="background: #E3F2FD;"></div>
+            <div class="color-swatch__label">Sleep</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION HEADERS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Section Headers</h2>
+        <div class="section-header">
+          <h3 class="section-header__title">My Focus</h3>
+          <button class="btn btn--secondary">Set Up</button>
+        </div>
+        <div class="demo-spacer"></div>
+        <div class="section-header">
+          <h3 class="section-header__title">Past 7 Days</h3>
+        </div>
+        <div class="demo-spacer"></div>
+        <div class="section-header">
+          <h3 class="section-header__title">Today</h3>
+          <button class="btn btn--secondary">See all</button>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           MODAL HEADER (with actions)
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Modal Header</h2>
+        <div class="modal-header">
+          <button class="modal-header__close">
+            <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+          <span class="modal-header__title">DEVICE SETTINGS</span>
+          <button class="modal-header__action">
+            <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            Add
+          </button>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           DEVICE CARD
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Device Card</h2>
+        <div class="device-card">
+          <h3 class="device-card__name">Body+</h3>
+          <div class="device-card__status">
+            <span class="device-card__sync">
+              <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="23 4 23 10 17 10"/>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+              </svg>
+              Synced 442d
+            </span>
+            <span class="device-card__divider">|</span>
+            <span class="device-card__battery">
+              <svg class="icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="6" width="18" height="12" rx="2" ry="2"/>
+                <line x1="23" y1="10" x2="23" y2="14"/>
+                <rect x="3" y="8" width="8" height="8" rx="1" fill="#4CAF50" stroke="none"/>
+              </svg>
+              56%
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SETTINGS SECTION CARD (with icon header)
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Settings Section Card</h2>
+        <div class="settings-section-card">
+          <div class="settings-section-card__header">
+            <div class="settings-section-card__icon">
+              <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h3 class="settings-section-card__title">Personalize Your Weigh-In</h3>
+            <p class="settings-section-card__description">Personalise your measurements for when you step on your scale.</p>
+          </div>
+          <div class="settings-section-card__items">
+            <div class="settings-item">
+              <div class="settings-item__icon settings-item__icon--default">
+                <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <span class="settings-item__title">Fat Mass Measurement</span>
+              <div class="toggle toggle--on">
+                <div class="toggle__thumb"></div>
+              </div>
+            </div>
+            <div class="settings-item">
+              <div class="settings-item__icon settings-item__icon--default">
+                <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <span class="settings-item__title">User name during weight-in</span>
+              <span class="settings-item__editable-value">KAR</span>
+              <button class="settings-item__edit-btn">
+                <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="settings-item">
+              <div class="settings-item__icon settings-item__icon--default">
+                <svg class="icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <line x1="8" y1="6" x2="21" y2="6"/>
+                  <line x1="8" y1="12" x2="21" y2="12"/>
+                  <line x1="8" y1="18" x2="21" y2="18"/>
+                  <line x1="3" y1="6" x2="3.01" y2="6"/>
+                  <line x1="3" y1="12" x2="3.01" y2="12"/>
+                  <line x1="3" y1="18" x2="3.01" y2="18"/>
+                </svg>
+              </div>
+              <span class="settings-item__title">Customize Screens</span>
+              <svg class="settings-item__chevron icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           FLOATING ACTION BUTTON
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Floating Action Button</h2>
+        <div class="demo-row">
+          <div class="fab">
+            <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <div class="fab fab--primary">
+            <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           DISCOVERY / TUTORIAL CARDS (Carousel)
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Discovery Cards (Carousel)</h2>
+        <div class="section-header" style="margin-bottom: var(--space-lg);">
+          <h3 class="section-header__title">Discover Body+</h3>
+          <button class="btn btn--filled">See all</button>
+        </div>
+        <div class="discovery-carousel">
+          <div class="discovery-card">
+            <div class="discovery-card__illustration" style="background: #5C8A4D;">
+              <svg class="discovery-card__icon" viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="12" width="32" height="24" rx="4" fill="#4A7A3D"/>
+                <rect x="12" y="16" width="24" height="16" rx="2" fill="#3D6A30"/>
+                <path d="M20 26l4 4 8-8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h4 class="discovery-card__title">Get Started</h4>
+            <span class="discovery-card__status">Completed</span>
+          </div>
+          <div class="discovery-card">
+            <div class="discovery-card__illustration" style="background: #5C8A4D;">
+              <svg class="discovery-card__icon" viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="12" width="32" height="24" rx="4" fill="#4A7A3D"/>
+                <rect x="12" y="16" width="24" height="16" rx="2" fill="#3D6A30"/>
+                <text x="24" y="28" text-anchor="middle" fill="white" font-size="10" font-weight="bold">+0.3</text>
+                <path d="M20 30l4 4 8-8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h4 class="discovery-card__title">Health Monitoring</h4>
+            <span class="discovery-card__status">Completed</span>
+          </div>
+          <div class="discovery-card">
+            <div class="discovery-card__illustration" style="background: #5C8A4D;">
+              <svg class="discovery-card__icon" viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="12" width="32" height="24" rx="4" fill="#4A7A3D"/>
+                <circle cx="24" cy="24" r="6" fill="white" opacity="0.3"/>
+                <path d="M24 20v8M20 24h8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h4 class="discovery-card__title">Settings</h4>
+            <span class="discovery-card__status discovery-card__status--pending">2 of 4</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           HELP CENTER / PRODUCT THUMBNAILS
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Help Center Thumbnails</h2>
+        <div class="section-header" style="margin-bottom: var(--space-lg);">
+          <h3 class="section-header__title">Help Center</h3>
+        </div>
+        <div class="product-thumbnails">
+          <div class="product-thumbnail">
+            <div class="product-thumbnail__image" style="background: linear-gradient(135deg, #e8e6e3 0%, #d5d3d0 100%);">
+              <svg viewBox="0 0 40 40" fill="none">
+                <rect x="8" y="12" width="24" height="16" rx="3" fill="#f5f4f2"/>
+                <rect x="12" y="16" width="16" height="8" rx="1" fill="#e0deda"/>
+              </svg>
+            </div>
+          </div>
+          <div class="product-thumbnail">
+            <div class="product-thumbnail__image" style="background: linear-gradient(135deg, #e8e6e3 0%, #d5d3d0 100%);">
+              <svg viewBox="0 0 40 40" fill="none">
+                <rect x="8" y="12" width="24" height="16" rx="3" fill="#f5f4f2"/>
+                <circle cx="20" cy="20" r="4" fill="#e0deda"/>
+              </svg>
+            </div>
+          </div>
+          <div class="product-thumbnail">
+            <div class="product-thumbnail__image" style="background: linear-gradient(135deg, #e8e6e3 0%, #d5d3d0 100%);">
+              <svg viewBox="0 0 40 40" fill="none">
+                <rect x="10" y="8" width="20" height="24" rx="2" fill="#f5f4f2"/>
+                <rect x="14" y="12" width="12" height="2" rx="1" fill="#e0deda"/>
+                <rect x="14" y="18" width="12" height="2" rx="1" fill="#e0deda"/>
+              </svg>
+            </div>
+          </div>
+          <div class="product-thumbnail">
+            <div class="product-thumbnail__image" style="background: linear-gradient(135deg, #e8e6e3 0%, #d5d3d0 100%);">
+              <svg viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="10" fill="#f5f4f2"/>
+                <circle cx="20" cy="20" r="6" fill="#D4AF37"/>
+                <rect x="18" y="10" width="4" height="6" rx="2" fill="#D4AF37"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SETTINGS ITEM VARIATIONS
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Settings Item Variations</h2>
+        <div style="border-radius: var(--radius-lg); overflow: hidden;">
+          <div class="settings-item">
+            <svg class="settings-item__icon-plain icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+              <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+              <circle cx="12" cy="20" r="1"/>
+            </svg>
+            <span class="settings-item__title">Update WiFi configuration</span>
+            <svg class="settings-item__chevron icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+          <div class="settings-item">
+            <svg class="settings-item__icon-plain icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+            <span class="settings-item__title">Check for updates</span>
+            <svg class="settings-item__chevron icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SCREEN HEADER (Activity-style)
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Screen Header (Activity-style)</h2>
+        <div class="screen-header">
+          <button class="screen-header__btn">
+            <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <span class="screen-header__title">ACTIVITY</span>
+          <button class="screen-header__btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="5" r="2"/>
+              <circle cx="12" cy="12" r="2"/>
+              <circle cx="12" cy="19" r="2"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           BAR CHART
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Bar Chart (Activity)</h2>
+        <div class="bar-chart" style="height: 180px;">
+          <div class="bar-chart__y-axis">
+            <span>2K</span>
+            <span>1K</span>
+            <span>0</span>
+          </div>
+          <div class="bar-chart__area">
+            <div class="bar-chart__bar" style="height: 15%;"></div>
+            <div class="bar-chart__bar" style="height: 5%;"></div>
+            <div class="bar-chart__bar" style="height: 0%;"></div>
+            <div class="bar-chart__bar" style="height: 0%;"></div>
+            <div class="bar-chart__bar" style="height: 0%;"></div>
+            <div class="bar-chart__bar" style="height: 0%;"></div>
+            <div class="bar-chart__bar" style="height: 0%;"></div>
+            <div class="bar-chart__bar" style="height: 0%;"></div>
+            <div class="bar-chart__bar" style="height: 25%;"></div>
+            <div class="bar-chart__bar" style="height: 30%;"></div>
+            <div class="bar-chart__bar" style="height: 100%;"></div>
+            <div class="bar-chart__bar" style="height: 35%;"></div>
+            <div class="bar-chart__bar" style="height: 40%;"></div>
+            <div class="bar-chart__bar" style="height: 0%;"></div>
+            <div class="bar-chart__bar" style="height: 0%;"></div>
+            <div class="bar-chart__bar" style="height: 0%;"></div>
+          </div>
+          <div class="bar-chart__x-axis">
+            <span>00</span>
+            <span>04</span>
+            <span>08</span>
+            <span>12</span>
+            <span>16</span>
+            <span>20</span>
+            <span>00</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           STATS CARD
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Stats Card</h2>
+        <div class="stats-card">
+          <div class="stats-card__header">
+            <div class="stats-card__main">
+              <span class="stats-card__label">Steps</span>
+              <span class="stats-card__value">6 343</span>
+            </div>
+            <div class="progress-circular" style="width: 90px; height: 90px;">
+              <svg width="90" height="90" style="transform: rotate(-90deg);">
+                <circle cx="45" cy="45" r="38" fill="none" stroke="var(--color-border-subtle)" stroke-width="6"/>
+                <circle cx="45" cy="45" r="38" fill="none" stroke="var(--color-brand-accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="238.8" stroke-dashoffset="88"/>
+              </svg>
+              <div class="progress-circular__content">
+                <div class="progress-circular__value">63%</div>
+                <div class="progress-circular__label">10 000</div>
+              </div>
+            </div>
+          </div>
+          <div class="stats-card__rows">
+            <div class="stats-card__row">
+              <span>Active minutes</span>
+              <span>19 min</span>
+            </div>
+            <div class="stats-card__row">
+              <span>Distance</span>
+              <span>5,0 km</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           DEVICE STATUS INDICATOR
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Device Status Indicator</h2>
+        <div class="demo-row">
+          <div class="device-status">
+            <div class="device-status__circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+            <div class="device-status__dot device-status__dot--connected"></div>
+          </div>
+          <div class="device-status device-status--lg">
+            <div class="device-status__circle">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-primary)" stroke-width="1.5">
+                <rect x="4" y="4" width="16" height="16" rx="2"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <div class="device-status__dot device-status__dot--connected"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CATEGORY CARDS (for filtering)
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Category Cards</h2>
+        <div class="category-grid">
+          <div class="category-card">
+            <div class="category-card__icon">
+              <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <div class="category-card__content">
+              <span class="category-card__label">All</span>
+              <span class="category-card__count">x0</span>
+            </div>
+          </div>
+          <div class="category-card">
+            <div class="category-card__icon">
+              <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <div class="category-card__content">
+              <span class="category-card__label">Articles</span>
+              <span class="category-card__count">x0</span>
+            </div>
+          </div>
+          <div class="category-card">
+            <div class="category-card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8 2 4 6 4 10c0 5.25 7 11.25 7.58 11.7a1 1 0 0 0 .84 0C13 21.25 20 15.25 20 10c0-4-4-8-8-8zm0 16.88C9.93 17.14 6 12.83 6 10c0-3.31 2.69-6 6-6s6 2.69 6 6c0 2.83-3.93 7.14-6 8.88z"/>
+              </svg>
+            </div>
+            <div class="category-card__content">
+              <span class="category-card__label">Recipes</span>
+              <span class="category-card__count">x0</span>
+            </div>
+          </div>
+          <div class="category-card">
+            <div class="category-card__icon">
+              <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <div class="category-card__content">
+              <span class="category-card__label">Workouts</span>
+              <span class="category-card__count">x0</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CONTENT GRID CARDS
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Content Grid Cards</h2>
+        <div class="content-grid">
+          <div class="content-grid-card">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop" alt="Recipes" class="content-grid-card__image"/>
+            <div class="content-grid-card__badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8 2 4 6 4 10c0 5.25 7 11.25 7.58 11.7a1 1 0 0 0 .84 0C13 21.25 20 15.25 20 10c0-4-4-8-8-8z"/>
+              </svg>
+              <span>RECIPES</span>
+            </div>
+          </div>
+          <div class="content-grid-card">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=400&fit=crop" alt="Workouts" class="content-grid-card__image"/>
+            <div class="content-grid-card__badge">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+              <span>WORKOUTS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PAGE & SECTION TITLES
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Page & Section Titles</h2>
+        <h1 class="page-title">Achieve</h1>
+        <h3 class="subsection-title">Explorer</h3>
+        <div class="demo-spacer"></div>
+        <h3 class="subsection-title">My favorites</h3>
+      </section>
+
+      <!-- ============================================================
+           CHART MODAL HEADER
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Chart Modal Header</h2>
+        <div class="chart-modal-header">
+          <button class="chart-modal-header__close">
+            <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+          <span class="chart-modal-header__date">26 Jul 2014 - 17 Jan 2026</span>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           TREND HEADER
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Trend Header</h2>
+        <div class="trend-header">
+          <span class="trend-header__label">TREND</span>
+          <span class="trend-header__value trend-header__value--negative">-0,9 kg</span>
+        </div>
+        <div class="trend-header" style="margin-top: var(--space-lg);">
+          <span class="trend-header__label">TREND</span>
+          <span class="trend-header__value trend-header__value--positive">+0,3 kg</span>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           LINE CHART / TREND CHART
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Trend Chart (Weight)</h2>
+        <div class="trend-chart" style="height: 320px;">
+          <div class="trend-chart__y-axis">
+            <span>kg</span>
+            <span>92</span>
+            <span>88</span>
+            <span>84</span>
+            <span>80</span>
+            <span>76</span>
+          </div>
+          <div class="trend-chart__area">
+            <svg width="100%" height="100%" viewBox="0 0 1000 200" preserveAspectRatio="none">
+              <!-- Grid lines -->
+              <line x1="0" y1="0" x2="1000" y2="0" stroke="var(--color-border-subtle)" stroke-width="1" vector-effect="non-scaling-stroke"/>
+              <line x1="0" y1="50" x2="1000" y2="50" stroke="var(--color-border-subtle)" stroke-width="1" vector-effect="non-scaling-stroke"/>
+              <line x1="0" y1="100" x2="1000" y2="100" stroke="var(--color-border-subtle)" stroke-width="1" vector-effect="non-scaling-stroke"/>
+              <line x1="0" y1="150" x2="1000" y2="150" stroke="var(--color-border-subtle)" stroke-width="1" vector-effect="non-scaling-stroke"/>
+              <line x1="0" y1="200" x2="1000" y2="200" stroke="var(--color-border-subtle)" stroke-width="1" vector-effect="non-scaling-stroke"/>
+              
+              <!-- Dense background noise (gray zigzag) - simulating raw weight measurements -->
+              <polyline points="
+                0,185 10,182 15,188 20,180 25,185 30,178 35,183 40,176 45,180 50,172 
+                55,178 60,170 65,175 70,168 75,172 80,165 85,170 90,162 95,168 100,160
+                105,165 110,158 115,163 120,155 125,160 130,152 135,158 140,150 145,155 150,148
+                155,152 160,145 165,150 170,142 175,148 180,140 185,145 190,138 195,142 200,135
+                205,140 210,133 215,138 220,130 225,135 230,128 235,133 240,126 245,130 250,123
+                255,128 260,120 265,125 270,118 275,122 280,115 285,120 290,112 295,118 300,110
+                305,115 310,108 315,112 320,105 325,110 330,102 335,108 340,100 345,105 350,98
+                355,102 360,95 365,100 370,92 375,98 380,90 385,95 390,88 395,92 400,85
+                405,90 410,82 415,88 420,80 425,85 430,78 435,82 440,75 445,80 450,72
+                455,78 460,70 465,75 470,68 475,72 480,65 485,70 490,62 495,68 500,60
+                505,65 510,58 515,62 520,55 525,60 530,52 535,58 540,50 545,55 550,48
+                555,52 560,46 565,50 570,44 575,48 580,42 585,46 590,40 595,44 600,38
+                605,42 610,36 615,40 620,34 625,38 630,32 635,36 640,30 645,34 650,28
+                655,32 660,28 665,32 670,26 675,30 680,25 685,28 690,24 695,28 700,22
+                705,26 710,24 715,28 720,22 725,26 730,24 735,28 740,26 745,30 750,28
+                755,32 760,30 765,34 770,32 775,36 780,34 785,38 790,36 795,40 800,42
+                805,46 810,50 815,55 820,60 825,68 830,75 835,82 840,90 845,98 850,108
+                855,115 860,122 865,130 870,138 875,145 880,152 885,158 890,165 895,172 900,178
+                905,182 910,186 915,188 920,190 925,188 930,185 935,180 940,175 945,170 950,165
+                955,160 960,155 965,150 970,148 975,152 980,158 985,165 990,172 995,180 1000,185
+              " fill="none" stroke="var(--color-text-tertiary)" stroke-width="1" opacity="0.4" vector-effect="non-scaling-stroke"/>
+              
+              <!-- Trend average line (lighter, smoother) -->
+              <polyline points="
+                0,182 50,175 100,165 150,152 200,140 250,128 300,115 350,100 400,88 450,75
+                500,62 550,52 600,42 650,32 700,26 750,30 800,42 850,108 900,165 950,175 1000,180
+              " fill="none" stroke="var(--color-text-tertiary)" stroke-width="1.5" opacity="0.25" vector-effect="non-scaling-stroke"/>
+              
+              <!-- Main trend line with data points -->
+              <polyline points="
+                0,185 80,175 160,168 240,145 320,115 400,85 480,62 560,50 640,45 720,48 800,52 880,165 960,180
+              " fill="none" stroke="var(--color-brand-accent)" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+              
+              <!-- Projected line (dotted) -->
+              <polyline points="880,165 1000,185" fill="none" stroke="var(--color-brand-accent)" stroke-width="2.5" stroke-dasharray="6 6" vector-effect="non-scaling-stroke"/>
+            </svg>
+            
+            <!-- Data points as absolutely positioned elements for consistent sizing -->
+            <div class="trend-chart__points">
+              <div class="trend-chart__point" style="left: 0%; top: 92.5%;"></div>
+              <div class="trend-chart__point" style="left: 8%; top: 87.5%;"></div>
+              <div class="trend-chart__point" style="left: 16%; top: 84%;"></div>
+              <div class="trend-chart__point" style="left: 24%; top: 72.5%;"></div>
+              <div class="trend-chart__point" style="left: 32%; top: 57.5%;"></div>
+              <div class="trend-chart__point" style="left: 40%; top: 42.5%;"></div>
+              <div class="trend-chart__point" style="left: 48%; top: 31%;"></div>
+              <div class="trend-chart__point" style="left: 56%; top: 25%;"></div>
+              <div class="trend-chart__point" style="left: 64%; top: 22.5%;"></div>
+              <div class="trend-chart__point" style="left: 72%; top: 24%;"></div>
+              <div class="trend-chart__point" style="left: 80%; top: 26%;"></div>
+              <div class="trend-chart__point" style="left: 88%; top: 82.5%;"></div>
+              <div class="trend-chart__point trend-chart__point--projected" style="left: 96%; top: 90%;"></div>
+            </div>
+          </div>
+          <div class="trend-chart__x-axis">
+            <div class="trend-chart__x-label">
+              <span>2015</span>
+              <span class="trend-chart__x-delta trend-chart__x-delta--positive">+4,3 kg</span>
+            </div>
+            <div class="trend-chart__x-label">
+              <span>2019</span>
+              <span class="trend-chart__x-delta trend-chart__x-delta--positive">+2,6 kg</span>
+            </div>
+            <div class="trend-chart__x-label">
+              <span>2023</span>
+              <span class="trend-chart__x-delta trend-chart__x-delta--negative">-5,7 kg</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           AREA CHART (Floors Climbed)
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Area Chart (Stepped)</h2>
+        <div class="area-chart-container">
+          <h3 class="subsection-title">Floors Climbed</h3>
+          <div class="area-chart" style="height: 140px;">
+            <svg width="100%" height="100%" viewBox="0 0 1000 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="var(--color-brand-accent)" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="var(--color-brand-accent)" stop-opacity="0.02"/>
+                </linearGradient>
+              </defs>
+              <!-- Stepped area fill - spans full width with gradual steps -->
+              <path d="
+                M0,100 
+                L0,95 
+                L50,95 
+                L50,95 
+                L100,95 
+                L100,92 
+                L150,92
+                L150,92
+                L200,92
+                L200,88
+                L250,88
+                L250,85
+                L300,85
+                L300,80
+                L350,80
+                L350,75
+                L400,75
+                L400,68
+                L450,68
+                L450,60
+                L500,60
+                L500,50
+                L550,50
+                L550,42
+                L600,42
+                L600,35
+                L650,35
+                L650,28
+                L700,28
+                L700,22
+                L750,22
+                L750,18
+                L800,18
+                L800,15
+                L850,15
+                L850,12
+                L900,12
+                L900,10
+                L950,10
+                L950,10
+                L1000,10
+                L1000,100 
+                Z
+              " fill="url(#areaGrad)"/>
+              <!-- Stepped line on top -->
+              <path d="
+                M0,95 
+                L50,95 
+                L50,95 
+                L100,95 
+                L100,92 
+                L150,92
+                L150,92
+                L200,92
+                L200,88
+                L250,88
+                L250,85
+                L300,85
+                L300,80
+                L350,80
+                L350,75
+                L400,75
+                L400,68
+                L450,68
+                L450,60
+                L500,60
+                L500,50
+                L550,50
+                L550,42
+                L600,42
+                L600,35
+                L650,35
+                L650,28
+                L700,28
+                L700,22
+                L750,22
+                L750,18
+                L800,18
+                L800,15
+                L850,15
+                L850,12
+                L900,12
+                L900,10
+                L950,10
+                L950,10
+                L1000,10
+              " fill="none" stroke="var(--color-brand-accent)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+            <div class="area-chart__value">5</div>
+          </div>
+          <div class="stats-card__rows">
+            <div class="stats-card__row">
+              <span>Floors Climbed</span>
+              <span>6</span>
+            </div>
+            <div class="stats-card__row">
+              <span>Total elevation</span>
+              <span>18 m</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CHALLENGE CARD
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Challenge Card</h2>
+        <div class="section-header" style="margin-bottom: var(--space-md);">
+          <h3>Leaderboard</h3>
+          <button class="btn btn--secondary btn--sm">Invite</button>
+        </div>
+        <div class="challenge-card">
+          <div class="challenge-card__illustration">
+            <!-- Placeholder illustration -->
+            <div class="challenge-card__avatars">
+              <div class="challenge-card__avatar challenge-card__avatar--center">
+                <div style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #E8DFF5, #D4C4E3);"></div>
+              </div>
+              <div class="challenge-card__avatar challenge-card__avatar--left">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #D4E8D1, #B8D4B4);"></div>
+              </div>
+              <div class="challenge-card__avatar challenge-card__avatar--right">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #F5E6D3, #E8D4C0);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="challenge-card__content">
+            <div class="challenge-card__title">Challenge your friends</div>
+            <div class="challenge-card__description">The challenge begins every Monday and lasts a week. One goal: make more steps than your friends!</div>
+            <svg class="challenge-card__chevron icon--sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           EMPTY STATE CARD
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Empty State Card</h2>
+        <div class="section-header" style="margin-bottom: var(--space-md);">
+          <h3>Workout</h3>
+          <button class="btn btn--secondary btn--sm">Add</button>
+        </div>
+        <div class="empty-state-card">
+          <div class="empty-state-card__illustration">
+            <!-- Placeholder illustration -->
+            <svg width="80" height="80" viewBox="0 0 80 80">
+              <rect x="10" y="15" width="35" height="50" rx="4" fill="#F9F3DC"/>
+              <rect x="35" y="25" width="35" height="40" rx="4" fill="#EDE4F3"/>
+              <path d="M20 35 L30 45 L40 30" stroke="#8B7B3D" stroke-width="2" fill="none"/>
+              <circle cx="55" cy="35" r="3" fill="#6B4D8A"/>
+              <rect x="48" y="42" width="14" height="2" rx="1" fill="#6B4D8A"/>
+              <rect x="48" y="48" width="10" height="2" rx="1" fill="#6B4D8A"/>
+            </svg>
+          </div>
+          <div class="empty-state-card__message">No activity</div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PROFILE COMPONENTS
+           ============================================================ -->
+      <section class="demo-section full-width">
+        <h2>Profile Components</h2>
+        
+        <!-- Profile Header -->
+        <div style="background: var(--color-bg-secondary); border-radius: var(--radius-lg); margin-bottom: var(--space-lg);">
+          <div class="profile-header">
+            <div class="avatar avatar--xl">KA</div>
+            <h1 class="profile-header__name">Karl</h1>
+          </div>
+          
+          <!-- Profile Info Button -->
+          <div style="padding: 0 var(--space-xl) var(--space-lg);">
+            <button class="profile-info-button">
+              <span>46 years old, 187 cm, 81,1 kg</span>
+              <svg width="20" height="20" fill="none" stroke="#0891B2" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- List Item with Avatar -->
+          <div style="border-top: 1px solid var(--color-border-separator);">
+            <div class="settings-item">
+              <div class="list-item__avatar">MI</div>
+              <div class="settings-item__content">
+                <div class="settings-item__title">Secondary Profiles</div>
+                <div class="settings-item__subtitle">Now in your Share Tab</div>
+              </div>
+              <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promo Card -->
+        <div class="promo-card" style="margin-bottom: var(--space-lg);">
+          <div class="promo-card__content">
+            <div class="promo-card__badge">
+              <span class="badge-wplus">W+</span>
+            </div>
+            <h3 class="promo-card__title">Powering your journey to longevity</h3>
+            <p class="promo-card__description">Withings+ offers you Cardio Check-Ups, vitalité indicator, Health Improvement Score and health insights via Withings Intelligence.</p>
+          </div>
+          <button class="promo-card__link">
+            <span>Discover</span>
+            <svg width="20" height="20" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Section Header with Badge -->
+        <div class="section-header" style="margin-bottom: var(--space-lg);">
+          <h3 class="section-header__title">Experimental Features</h3>
+          <span class="section-header__badge">Beta</span>
+        </div>
+
+        <!-- Feature Toggle Row -->
+        <div class="feature-toggle-row">
+          <div class="feature-toggle-row__image">
+            <!-- Placeholder image -->
+            <svg width="60" height="60" viewBox="0 0 60 60">
+              <rect x="8" y="10" width="44" height="34" rx="4" fill="#E8F4F8"/>
+              <rect x="12" y="18" width="20" height="3" rx="1" fill="#0891B2"/>
+              <rect x="12" y="24" width="30" height="2" rx="1" fill="#0891B2" opacity="0.5"/>
+              <rect x="12" y="28" width="25" height="2" rx="1" fill="#0891B2" opacity="0.5"/>
+              <rect x="12" y="32" width="15" height="2" rx="1" fill="#0891B2" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="feature-toggle-row__content">
+            <div class="feature-toggle-row__header">
+              <span class="feature-toggle-row__title">Withings Intelligence</span>
+              <span class="badge-wplus">W+</span>
+            </div>
+            <p class="feature-toggle-row__description">Insights & trend detection and a health assistant.</p>
+          </div>
+          <div class="feature-toggle-row__toggle">
+            <label class="toggle">
+              <input type="checkbox" checked>
+              <span class="toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           DATE NAVIGATOR
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Date Navigator</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+          <!-- Basic Date Navigator -->
+          <div class="card" style="padding: 0; overflow: hidden;">
+            <div class="date-navigator">
+              <button class="btn btn--icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <span class="date-navigator__label">Today</span>
+              <button class="btn btn--icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Date Navigator with specific date -->
+          <div class="card" style="padding: 0; overflow: hidden;">
+            <div class="date-navigator">
+              <button class="btn btn--icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <span class="date-navigator__label">January 15, 2026</span>
+              <button class="btn btn--icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Date Navigator with week range -->
+          <div class="card" style="padding: 0; overflow: hidden;">
+            <div class="date-navigator">
+              <button class="btn btn--icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <span class="date-navigator__label">Jan 9 – Jan 15</span>
+              <button class="btn btn--icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           MODAL (BOTTOM SHEET)
+           ============================================================ -->
+      <section class="demo-section">
+        <h2>Modal (Bottom Sheet)</h2>
+        <p style="color: var(--color-text-secondary); margin-bottom: var(--space-lg); font-size: 15px;">
+          Modal shown in static demo mode. In production, this would appear as a bottom sheet overlay.
+        </p>
+
+        <!-- Modal with basic content -->
+        <div class="modal modal--demo">
+          <div class="modal__handle"></div>
+          <div class="modal__header">
+            <button class="btn btn--icon" style="background: var(--color-bg-elevated);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <span class="modal__title">Select Date</span>
+            <div style="width: 44px;"></div>
+          </div>
+          <div class="modal__content">
+            <!-- Example content -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+              <div class="settings-item">
+                <span class="settings-item__title">Today</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="settings-item">
+                <span class="settings-item__title">Yesterday</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+              <div class="settings-item">
+                <span class="settings-item__title">Pick a date</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal with action button -->
+        <div class="modal modal--demo" style="margin-top: var(--space-xl);">
+          <div class="modal__handle"></div>
+          <div class="modal__header" style="display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: var(--space-md);">
+            <button class="btn btn--icon" style="background: var(--color-bg-elevated);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <span class="modal__title" style="position: static; transform: none; text-align: center;">Filter</span>
+            <button class="btn btn--primary" style="height: 36px; padding: 0 var(--space-lg); font-size: 15px;">
+              Apply
+            </button>
+          </div>
+          <div class="modal__content">
+            <!-- Example filter content -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+              <div>
+                <div style="font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: var(--space-md);">Time Period</div>
+                <div class="segmented-control" style="width: 100%;">
+                  <button class="segmented-control__item segmented-control__item--active">Week</button>
+                  <button class="segmented-control__item">Month</button>
+                  <button class="segmented-control__item">Year</button>
+                </div>
+              </div>
+              <div>
+                <div style="font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: var(--space-md);">Category</div>
+                <div style="display: flex; flex-wrap: wrap; gap: var(--space-sm);">
+                  <span class="badge badge--activity">Activity</span>
+                  <span class="badge badge--body">Body</span>
+                  <span class="badge badge--heart">Heart</span>
+                  <span class="badge badge--sleep">Sleep</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>

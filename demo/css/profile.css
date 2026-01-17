@@ -1,0 +1,89 @@
+/* ============================================================================
+   PROFILE INFO BUTTON
+   ============================================================================ */
+.profile-info-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  padding: var(--space-md) var(--space-lg);
+  background: #E8F4F8;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  color: #0891B2;
+}
+
+.profile-info-button:hover {
+  background: #D9EEF3;
+}
+
+/* ============================================================================
+   PROFILE HEADER
+   ============================================================================ */
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-xl);
+}
+
+.profile-header__name {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* ============================================================================
+   W+ BADGE
+   ============================================================================ */
+.badge-wplus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F97316 0%, #EC4899 100%);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+/* Larger W+ badge icon variant */
+.badge-wplus--icon {
+  width: 28px;
+  height: 20px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 10px;
+}
+
+/* ============================================================================
+   SECTION HEADER WITH BADGE
+   ============================================================================ */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Outlined Beta badge style */
+.section-header__badge {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding: 4px 12px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  background: transparent;
+}

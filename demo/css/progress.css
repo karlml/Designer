@@ -1,0 +1,93 @@
+/* PROGRESS BAR */
+/* ============================================================================
+   PROGRESS BAR
+   ============================================================================ */
+.progress-bar {
+  height: 4px;
+  background: var(--color-bg-elevated);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: var(--color-brand-accent);
+  border-radius: 0 2px 2px 0;
+}
+
+
+/* CIRCULAR PROGRESS */
+/* ============================================================================
+   CIRCULAR PROGRESS
+   ============================================================================ */
+.progress-circular {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circular__content {
+  position: absolute;
+  text-align: center;
+}
+
+.progress-circular__value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-brand-accent);
+  line-height: 1;
+}
+
+.progress-circular__label {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin-top: 2px;
+}
+
+
+/* DEVICE STATUS INDICATOR */
+/* ============================================================================
+   DEVICE STATUS INDICATOR
+   ============================================================================ */
+.device-status {
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+
+.device-status--lg {
+  width: 56px;
+  height: 56px;
+}
+
+.device-status__circle {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border-subtle);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+}
+
+.device-status__dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-bg-primary);
+}
+
+.device-status__dot--connected {
+  background: var(--color-success-text);
+}
+
+.device-status__dot--disconnected {
+  background: var(--color-text-tertiary);
+}
+

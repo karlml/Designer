@@ -1,0 +1,127 @@
+/* TOGGLE SWITCH */
+/* ============================================================================
+   TOGGLE SWITCH
+   ============================================================================ */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 51px;
+  height: 31px;
+  flex-shrink: 0;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  transition: background 150ms ease;
+}
+
+.toggle__slider::before {
+  position: absolute;
+  content: "";
+  height: 27px;
+  width: 27px;
+  left: 2px;
+  bottom: 2px;
+  background: white;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  transition: transform 150ms ease;
+}
+
+.toggle input:checked + .toggle__slider {
+  background: #1D1D1F !important;
+}
+
+.toggle input:checked + .toggle__slider::before {
+  transform: translateX(20px);
+}
+
+/* Div-based toggle (non-interactive demo) */
+.toggle:not(:has(input)) {
+  background: var(--color-border-subtle);
+  border-radius: var(--radius-full);
+}
+
+.toggle--on:not(:has(input)) { 
+  background: #1D1D1F; 
+}
+
+.toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 27px;
+  height: 27px;
+  border-radius: var(--radius-full);
+  background: white;
+  box-shadow: var(--shadow-sm);
+  transition: left 150ms ease;
+}
+
+.toggle--on .toggle__thumb { left: 22px; }
+
+
+/* SEGMENTED CONTROL */
+/* ============================================================================
+   SEGMENTED CONTROL / SERVICE TABS
+   ============================================================================ */
+.segmented-control {
+  display: flex;
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-full);
+  padding: 4px;
+}
+
+.segmented-control__item {
+  flex: 1;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 150ms ease;
+}
+
+.segmented-control__item--active {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* DROPDOWN SELECT */
+/* ============================================================================
+   DROPDOWN SELECT
+   ============================================================================ */
+.dropdown-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  cursor: pointer;
+}
+
+.dropdown-select__label { font-size: 17px; font-weight: 400; color: var(--color-text-primary); }
+.dropdown-select__icon { color: var(--color-text-tertiary); }
+

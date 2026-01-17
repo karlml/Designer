@@ -1,0 +1,204 @@
+/* INFO ROW */
+/* ============================================================================
+   INFO ROW
+   ============================================================================ */
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  background: var(--color-bg-secondary);
+}
+
+.info-row + .info-row {
+  border-top: 1px solid var(--color-border-separator);
+}
+
+.info-row__label {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.info-row__value {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+
+/* SETTINGS LIST ITEM */
+/* ============================================================================
+   SETTINGS LIST ITEM
+   ============================================================================ */
+.settings-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--color-bg-secondary);
+  cursor: pointer;
+}
+
+.settings-item + .settings-item {
+  border-top: 1px solid var(--color-border-separator);
+}
+
+.settings-item__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.settings-item__icon--activity { background: var(--color-activity-bg); color: var(--color-activity-text); }
+.settings-item__icon--body { background: var(--color-body-bg); color: var(--color-body-text); }
+.settings-item__icon--heart { background: var(--color-heart-bg); color: var(--color-heart-text); }
+.settings-item__icon--default { background: var(--color-bg-elevated); color: var(--color-text-secondary); }
+
+.settings-item__title { font-size: 17px; font-weight: 400; color: var(--color-text-primary); flex: 1; }
+.settings-item__value { font-size: 17px; color: var(--color-brand-accent); margin-right: var(--space-sm); }
+.settings-item__chevron { color: var(--color-text-tertiary); flex-shrink: 0; }
+
+
+/* SELECTION CARD */
+/* ============================================================================
+   SELECTION CARD
+   ============================================================================ */
+.selection-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.selection-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.selection-card__content { flex: 1; }
+.selection-card__title { font-size: 17px; font-weight: 600; color: var(--color-text-primary); }
+.selection-card__subtitle { font-size: 15px; color: var(--color-text-secondary); margin-top: 2px; }
+
+.selection-card__action {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* SETTINGS SECTION CARD */
+/* ============================================================================
+   SETTINGS SECTION CARD
+   ============================================================================ */
+.settings-section-card {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.settings-section-card__header {
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border-separator);
+}
+
+.settings-section-card__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-lg);
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+}
+
+.settings-section-card__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.3px;
+}
+
+.settings-section-card__description {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Settings item with editable value */
+.settings-item__editable-value {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-right: var(--space-xs);
+}
+
+.settings-item__edit-btn {
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+}
+
+
+/* SETTINGS ITEM PLAIN */
+/* ============================================================================
+   SETTINGS ITEM - PLAIN ICON VARIANT
+   ============================================================================ */
+.settings-item__icon-plain {
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+
+/* LIST ITEM WITH AVATAR */
+/* ============================================================================
+   LIST ITEM WITH AVATAR
+   ============================================================================ */
+.list-item__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ============================================================================

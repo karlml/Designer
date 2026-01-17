@@ -1,0 +1,234 @@
+/* BAR CHART */
+/* ============================================================================
+   BAR CHART
+   ============================================================================ */
+.bar-chart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+}
+
+.bar-chart__y-axis {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 30px;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+
+.bar-chart__area {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  border-bottom: 1px dashed var(--color-border-subtle);
+  padding-bottom: 1px;
+}
+
+.bar-chart__bar {
+  flex: 1;
+  background: var(--color-brand-accent);
+  border-radius: 2px 2px 0 0;
+  min-height: 0;
+  transition: height 300ms ease;
+}
+
+.bar-chart__x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+
+
+/* CHART MODAL HEADER */
+/* ============================================================================
+   CHART MODAL HEADER
+   ============================================================================ */
+.chart-modal-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.chart-modal-header__close {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-elevated);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+}
+
+.chart-modal-header__date {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+
+/* TREND HEADER */
+/* ============================================================================
+   TREND HEADER
+   ============================================================================ */
+.trend-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.trend-header__label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.trend-header__value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.trend-header__value--positive {
+  color: var(--color-heart-text);
+}
+
+.trend-header__value--negative {
+  color: var(--color-success-text);
+}
+
+
+/* TREND CHART */
+/* ============================================================================
+   TREND CHART (Line Chart)
+   ============================================================================ */
+.trend-chart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-right: 45px;
+}
+
+.trend-chart__y-axis {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 50px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+
+.trend-chart__area {
+  flex: 1;
+  min-height: 200px;
+  position: relative;
+}
+
+.trend-chart__area svg {
+  display: block;
+}
+
+.trend-chart__points {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.trend-chart__point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--color-bg-secondary);
+  border: 2.5px solid var(--color-brand-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trend-chart__point--projected {
+  border-style: dashed;
+}
+
+.trend-chart__x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--space-md);
+}
+
+.trend-chart__x-label {
+  text-align: center;
+}
+
+.trend-chart__x-label span:first-child {
+  display: block;
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+.trend-chart__x-delta {
+  display: block;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.trend-chart__x-delta--positive {
+  color: var(--color-heart-text);
+}
+
+.trend-chart__x-delta--negative {
+  color: var(--color-success-text);
+}
+
+/* ============================================================================
+
+/* AREA CHART */
+   AREA CHART (Stepped)
+   ============================================================================ */
+.area-chart-container {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.area-chart {
+  position: relative;
+  margin-bottom: var(--space-lg);
+}
+
+.area-chart__value {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* ============================================================================

@@ -37,8 +37,6 @@ import {
   Pill,
   Clock,
   Video,
-  Check,
-  Filter,
 } from 'lucide-react';
 
 // iOS Status Bar Component
@@ -104,7 +102,7 @@ function IOSStatusBar() {
   );
 }
 
-// Custom Inbox Header with actions
+// Custom Inbox Header - clean and minimal
 function InboxHeader() {
   return (
     <div
@@ -125,42 +123,6 @@ function InboxHeader() {
       }}>
         Inbox
       </h1>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-md)' }}>
-        {/* Filter button */}
-        <button
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: 'var(--radius-full)',
-            backgroundColor: 'var(--color-bg-elevated)',
-            border: 'none',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'var(--color-text-secondary)',
-          }}
-        >
-          <Filter size={20} />
-        </button>
-        {/* Mark all read */}
-        <button
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: 'var(--radius-full)',
-            backgroundColor: 'var(--color-bg-elevated)',
-            border: 'none',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'var(--color-text-secondary)',
-          }}
-        >
-          <Check size={20} />
-        </button>
-      </div>
     </div>
   );
 }
@@ -236,26 +198,22 @@ function AppointmentReminderCard({
             {specialty}
           </div>
           
-          {/* Date/Time Badge */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 'var(--space-xs)',
-                padding: '6px 12px',
-                backgroundColor: 'var(--color-bg-elevated)',
-                borderRadius: 'var(--radius-full)',
-              }}
-            >
-              <Clock size={14} color="var(--color-text-secondary)" />
-              <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-primary)' }}>
+          {/* Date/Time - Clean inline text */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-xs)', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-xs)' }}>
+              <Clock size={14} color="var(--color-text-tertiary)" style={{ flexShrink: 0 }} />
+              <span style={{ fontSize: 13, color: 'var(--color-text-secondary)', whiteSpace: 'nowrap' }}>
                 {dateTime}
               </span>
             </div>
-            <Badge variant={type === 'video' ? 'sleep' : 'success'}>
-              {type === 'video' ? 'Video Call' : 'In Person'}
-            </Badge>
+            <span style={{ 
+              fontSize: 13, 
+              color: type === 'video' ? 'var(--color-sleep-text)' : 'var(--color-success-text)',
+              fontWeight: 500,
+              whiteSpace: 'nowrap',
+            }}>
+              · {type === 'video' ? 'Video' : 'In Person'}
+            </span>
           </div>
         </div>
 
@@ -690,6 +648,16 @@ function FilterPills({
   );
 }
 
+// Unified inbox item type
+type InboxItem = {
+  id: string;
+  type: 'message' | 'appointment' | 'alert' | 'tip';
+  timestamp: string;
+  sortOrder: number;
+  isUnread?: boolean;
+  data: any;
+};
+
 export function InboxPage() {
   const [activeTab, setActiveTab] = useState('inbox');
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -701,30 +669,242 @@ export function InboxPage() {
     { id: 'profile', label: 'Profile', icon: <User size={24} /> },
   ];
 
+  // All inbox items in a unified list
+  const allItems: InboxItem[] = [
+    {
+      id: 'appt-1',
+      type: 'appointment',
+      timestamp: 'Tomorrow',
+      sortOrder: 0,
+      isUnread: true,
+      data: {
+        doctorName: 'Dr. Sarah Chen',
+        specialty: 'General Practitioner • Muscle and Joint Pains',
+        dateTime: 'Tomorrow, 10:30 AM',
+        type: 'video',
+        imageUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&crop=face',
+      },
+    },
+    {
+      id: 'msg-1',
+      type: 'message',
+      timestamp: '2h',
+      sortOrder: 1,
+      isUnread: true,
+      data: {
+        senderName: 'Coach Marcus',
+        senderInitials: 'CM',
+        senderImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+        preview: "Great progress this week! Let's talk about your sleep patterns...",
+        unreadCount: 2,
+        isCoach: true,
+      },
+    },
+    {
+      id: 'alert-1',
+      type: 'alert',
+      timestamp: '3h',
+      sortOrder: 2,
+      isUnread: true,
+      data: {
+        icon: <TrendingUp size={20} color="var(--color-success-text)" />,
+        iconBgColor: 'var(--color-success-bg)',
+        title: 'Weekly Health Score',
+        message: "Your health score improved by 3 points! You're now at 78.",
+        actionLabel: 'View Report',
+      },
+    },
+    {
+      id: 'alert-2',
+      type: 'alert',
+      timestamp: '4h',
+      sortOrder: 3,
+      isUnread: false,
+      data: {
+        icon: <AlertCircle size={20} color="var(--color-heart-text)" />,
+        iconBgColor: 'var(--color-heart-bg)',
+        iconColor: 'var(--color-heart-text)',
+        title: 'Blood Pressure Trend',
+        message: 'Your readings have been elevated this week. Consider reviewing with your doctor.',
+      },
+    },
+    {
+      id: 'alert-3',
+      type: 'alert',
+      timestamp: '5h',
+      sortOrder: 4,
+      isUnread: false,
+      data: {
+        icon: <Watch size={20} color="var(--color-sleep-text)" />,
+        iconBgColor: 'var(--color-sleep-bg)',
+        title: 'Device Synced',
+        message: 'Your ScanWatch successfully synced 7 days of data.',
+      },
+    },
+    {
+      id: 'msg-2',
+      type: 'message',
+      timestamp: 'Yesterday',
+      sortOrder: 5,
+      isUnread: false,
+      data: {
+        senderName: 'Dr. Sarah Chen',
+        senderInitials: 'SC',
+        senderImage: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&crop=face',
+        preview: "Your recent lab results look good. I've added some notes...",
+        isCoach: false,
+      },
+    },
+    {
+      id: 'alert-4',
+      type: 'alert',
+      timestamp: '8h',
+      sortOrder: 6,
+      isUnread: false,
+      data: {
+        icon: <Pill size={20} color="var(--color-body-text)" />,
+        iconBgColor: 'var(--color-body-bg)',
+        title: 'Medication Reminder',
+        message: "Don't forget to take your evening supplements.",
+      },
+    },
+    {
+      id: 'alert-5',
+      type: 'alert',
+      timestamp: '1d',
+      sortOrder: 7,
+      isUnread: false,
+      data: {
+        icon: <Award size={20} color="var(--color-activity-text)" />,
+        iconBgColor: 'var(--color-activity-bg)',
+        title: 'Achievement Unlocked',
+        message: "30-Day Activity Streak! You've been consistently active for a month.",
+        actionLabel: 'Share',
+      },
+    },
+    {
+      id: 'msg-3',
+      type: 'message',
+      timestamp: '2 days',
+      sortOrder: 8,
+      isUnread: false,
+      data: {
+        senderName: 'Abel Support',
+        senderInitials: 'AS',
+        preview: "Thank you for your feedback! We've implemented the changes...",
+        isCoach: false,
+      },
+    },
+    {
+      id: 'tip-1',
+      type: 'tip',
+      timestamp: '2d',
+      sortOrder: 9,
+      isUnread: false,
+      data: {
+        title: 'Boost Your Morning Routine',
+        description: 'Try starting your day with 10 minutes of light stretching. Studies show it can improve energy levels by up to 25%.',
+        category: 'Wellness',
+        readTime: '3 min read',
+      },
+    },
+  ];
+
+  // Filter items based on selected filter
+  const filteredItems = allItems.filter((item) => {
+    if (selectedFilter === 'all') return true;
+    if (selectedFilter === 'messages') return item.type === 'message';
+    if (selectedFilter === 'appointments') return item.type === 'appointment';
+    if (selectedFilter === 'notifications') return item.type === 'alert';
+    if (selectedFilter === 'tips') return item.type === 'tip';
+    return true;
+  });
+
+  // Count items for filter badges
   const filterOptions = [
-    { id: 'all', label: 'All', count: 5 },
-    { id: 'messages', label: 'Messages', count: 2 },
-    { id: 'appointments', label: 'Appointments', count: 1 },
-    { id: 'notifications', label: 'Alerts', count: 2 },
+    { id: 'all', label: 'All', count: allItems.filter(i => i.isUnread).length },
+    { id: 'messages', label: 'Messages', count: allItems.filter(i => i.type === 'message' && i.isUnread).length },
+    { id: 'appointments', label: 'Appointments', count: allItems.filter(i => i.type === 'appointment' && i.isUnread).length },
+    { id: 'notifications', label: 'Alerts', count: allItems.filter(i => i.type === 'alert' && i.isUnread).length },
     { id: 'tips', label: 'Tips' },
   ];
 
+  // Render an inbox item based on its type
+  const renderItem = (item: InboxItem) => {
+    switch (item.type) {
+      case 'appointment':
+        return (
+          <div key={item.id} style={{ padding: '0 var(--space-lg) var(--space-md)' }}>
+            <AppointmentReminderCard {...item.data} />
+          </div>
+        );
+      case 'message':
+        return (
+          <div key={item.id} style={{ padding: '0 var(--space-lg) var(--space-sm)' }}>
+            <MessageThreadItem {...item.data} timestamp={item.timestamp} />
+          </div>
+        );
+      case 'alert':
+        return (
+          <div key={item.id} style={{ padding: '0 var(--space-lg) var(--space-sm)' }}>
+            <SystemNotificationItem {...item.data} timestamp={item.timestamp} isUnread={item.isUnread} />
+          </div>
+        );
+      case 'tip':
+        return (
+          <div key={item.id} style={{ padding: '0 var(--space-lg) var(--space-md)' }}>
+            <Card>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--space-md)' }}>
+                <div
+                  style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: 'var(--radius-md)',
+                    backgroundColor: 'var(--color-activity-bg)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                  }}
+                >
+                  <Sparkles size={24} color="var(--color-activity-text)" />
+                </div>
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--color-text-primary)', marginBottom: 'var(--space-xs)' }}>
+                    {item.data.title}
+                  </h3>
+                  <p style={{ fontSize: 14, color: 'var(--color-text-secondary)', lineHeight: 1.5, margin: 0 }}>
+                    {item.data.description}
+                  </p>
+                  <div style={{ marginTop: 'var(--space-md)', display: 'flex', gap: 'var(--space-sm)' }}>
+                    <Badge variant="activity">{item.data.category}</Badge>
+                    <Badge variant="default">{item.data.readTime}</Badge>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
-    <>
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'var(--color-bg-primary)',
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
       <style>{globalStyles}</style>
-      <div
-        style={{
-          maxWidth: 430,
-          margin: '0 auto',
-          backgroundColor: 'var(--color-bg-primary)',
-          minHeight: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          position: 'relative',
-        }}
-      >
-        {/* iOS Status Bar */}
-        <IOSStatusBar />
+      {/* iOS Status Bar */}
+      <IOSStatusBar />
 
         {/* Inbox Header */}
         <InboxHeader />
@@ -744,168 +924,35 @@ export function InboxPage() {
             flex: 1,
             overflowY: 'auto',
             paddingBottom: 100,
+            paddingTop: 'var(--space-sm)',
           }}
         >
-          {/* Pinned Appointment */}
-          <div style={{ padding: '0 var(--space-xl) var(--space-lg)' }}>
-            <AppointmentReminderCard
-              doctorName="Dr. Sarah Chen"
-              specialty="Cardiologist • Heart Health Checkup"
-              dateTime="Tomorrow, 10:30 AM"
-              type="video"
-              imageUrl="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&crop=face"
-            />
-          </div>
+          {/* Unified filtered list */}
+          {filteredItems.map(renderItem)}
 
-          {/* Health Alert */}
-          <div style={{ padding: '0 var(--space-xl) var(--space-lg)' }}>
-            <HealthAlertCard
-              title="Blood Pressure Trend"
-              message="Your readings have been elevated this week. Consider reviewing with your doctor."
-              severity="warning"
-            />
-          </div>
-
-          {/* Messages Section */}
-          <div style={{ padding: '0 var(--space-xl)' }}>
-            <SectionHeader title="Messages" badge="2 new" />
-          </div>
-
-          <div style={{ padding: '0 var(--space-md)' }}>
-            <MessageThreadItem
-              senderName="Coach Marcus"
-              senderInitials="CM"
-              senderImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
-              preview="Great progress this week! Let's talk about your sleep patterns..."
-              timestamp="2h"
-              unreadCount={2}
-              isCoach
-            />
-            
-            <MessageThreadItem
-              senderName="Dr. Sarah Chen"
-              senderInitials="SC"
-              senderImage="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&crop=face"
-              preview="Your recent lab results look good. I've added some notes..."
-              timestamp="Yesterday"
-              isCoach={false}
-            />
-
-            <MessageThreadItem
-              senderName="Abel Support"
-              senderInitials="AS"
-              preview="Thank you for your feedback! We've implemented the changes..."
-              timestamp="2 days"
-              isCoach={false}
-            />
-          </div>
-
-          {/* Notifications Section */}
-          <div style={{ padding: 'var(--space-xl) var(--space-xl) 0' }}>
-            <SectionHeader title="Notifications" />
-          </div>
-
-          <div style={{ padding: '0 var(--space-md)' }}>
-            <SystemNotificationItem
-              icon={<TrendingUp size={20} color="var(--color-success-text)" />}
-              iconBgColor="var(--color-success-bg)"
-              iconColor="var(--color-success-text)"
-              title="Weekly Health Score"
-              message="Your health score improved by 3 points! You're now at 78."
-              timestamp="3h"
-              isUnread
-              actionLabel="View Report"
-            />
-
-            <SystemNotificationItem
-              icon={<Watch size={20} color="var(--color-sleep-text)" />}
-              iconBgColor="var(--color-sleep-bg)"
-              iconColor="var(--color-sleep-text)"
-              title="Device Synced"
-              message="Your ScanWatch successfully synced 7 days of data."
-              timestamp="5h"
-            />
-
-            <SystemNotificationItem
-              icon={<Pill size={20} color="var(--color-body-text)" />}
-              iconBgColor="var(--color-body-bg)"
-              iconColor="var(--color-body-text)"
-              title="Medication Reminder"
-              message="Don't forget to take your evening supplements."
-              timestamp="8h"
-            />
-
-            <SystemNotificationItem
-              icon={<Award size={20} color="var(--color-activity-text)" />}
-              iconBgColor="var(--color-activity-bg)"
-              iconColor="var(--color-activity-text)"
-              title="Achievement Unlocked"
-              message="30-Day Activity Streak! You've been consistently active for a month."
-              timestamp="1d"
-              actionLabel="Share"
-            />
-          </div>
-
-          {/* Tips Section */}
-          <div style={{ padding: 'var(--space-xl)' }}>
-            <SectionHeader title="Health Tips" action={<span style={{ fontSize: 14, color: 'var(--color-brand-accent)', fontWeight: 600, cursor: 'pointer' }}>See All</span>} />
-            
-            <Card>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--space-md)' }}>
-                <div
-                  style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: 'var(--radius-md)',
-                    backgroundColor: 'var(--color-activity-bg)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                  }}
-                >
-                  <Sparkles size={24} color="var(--color-activity-text)" />
-                </div>
-                <div style={{ flex: 1 }}>
-                  <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--color-text-primary)', marginBottom: 'var(--space-xs)' }}>
-                    Boost Your Morning Routine
-                  </h3>
-                  <p style={{ fontSize: 14, color: 'var(--color-text-secondary)', lineHeight: 1.5, margin: 0 }}>
-                    Try starting your day with 10 minutes of light stretching. Studies show it can improve energy levels by up to 25%.
-                  </p>
-                  <div style={{ marginTop: 'var(--space-md)', display: 'flex', gap: 'var(--space-sm)' }}>
-                    <Badge variant="activity">Wellness</Badge>
-                    <Badge variant="default">3 min read</Badge>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </div>
+          {/* Empty state */}
+          {filteredItems.length === 0 && (
+            <div style={{ 
+              padding: 'var(--space-3xl)', 
+              textAlign: 'center',
+              color: 'var(--color-text-tertiary)',
+            }}>
+              <Mail size={48} style={{ opacity: 0.3, marginBottom: 'var(--space-md)' }} />
+              <p>No items to show</p>
+            </div>
+          )}
 
           {/* Bottom padding for scroll */}
           <div style={{ height: 'var(--space-3xl)' }} />
         </div>
 
-        {/* Bottom Tab Bar - Fixed */}
-        <div
-          style={{
-            position: 'fixed',
-            bottom: 0,
-            left: '50%',
-            transform: 'translateX(-50)',
-            width: '100%',
-            maxWidth: 430,
-            zIndex: 100,
-          }}
-        >
-          <TabBar
-            items={tabItems}
-            activeId={activeTab}
-            onChange={setActiveTab}
-          />
-        </div>
-      </div>
-    </>
+      {/* Bottom Tab Bar */}
+      <TabBar
+        items={tabItems}
+        activeId={activeTab}
+        onChange={setActiveTab}
+      />
+    </div>
   );
 }
 

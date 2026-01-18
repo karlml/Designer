@@ -20,7 +20,8 @@ export function TabBar({ items, activeId, onChange }: TabBarProps) {
       style={{
         display: 'flex',
         alignItems: 'flex-start',
-        justifyContent: 'space-around',
+        justifyContent: 'flex-start',
+        gap: 'var(--space-sm)',
         height: 83,
         backgroundColor: 'var(--color-bg-elevated)',
         borderRadius: 'var(--radius-2xl) var(--radius-2xl) 0 0',
@@ -38,7 +39,7 @@ export function TabBar({ items, activeId, onChange }: TabBarProps) {
               flexDirection: 'column',
               alignItems: 'center',
               gap: 'var(--space-xs)',
-              padding: 'var(--space-sm) var(--space-lg)',
+              padding: 'var(--space-sm) var(--space-md)',
               borderRadius: 'var(--radius-full)',
               backgroundColor: isActive ? 'rgba(200, 197, 192, 0.6)' : 'transparent',
               border: 'none',

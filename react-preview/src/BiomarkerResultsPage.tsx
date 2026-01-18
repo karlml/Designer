@@ -107,19 +107,18 @@ export function BiomarkerResultsPage() {
   ];
 
   return (
-    <>
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'var(--color-bg-primary)',
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
       <style>{globalStyles}</style>
-      <div
-        style={{
-          maxWidth: 430,
-          margin: '0 auto',
-          backgroundColor: 'var(--color-bg-primary)',
-          minHeight: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          position: 'relative',
-        }}
-      >
         {/* Navigation Header */}
         <NavHeader 
           title="Creatinine" 
@@ -325,26 +324,13 @@ export function BiomarkerResultsPage() {
           </div>
         </div>
 
-        {/* Bottom Tab Bar - Fixed */}
-        <div
-          style={{
-            position: 'fixed',
-            bottom: 0,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '100%',
-            maxWidth: 430,
-            zIndex: 100,
-          }}
-        >
-          <TabBar
-            items={tabItems}
-            activeId={activeTab}
-            onChange={setActiveTab}
-          />
-        </div>
-      </div>
-    </>
+      {/* Bottom Tab Bar */}
+      <TabBar
+        items={tabItems}
+        activeId={activeTab}
+        onChange={setActiveTab}
+      />
+    </div>
   );
 }
 

@@ -21,10 +21,13 @@ export function TabBar({ items, activeId, onChange }: TabBarProps) {
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'space-around',
+        width: '100%',
         height: 83,
+        flexShrink: 0,
         backgroundColor: 'var(--color-bg-elevated)',
         borderRadius: 'var(--radius-2xl) var(--radius-2xl) 0 0',
         padding: 'var(--space-md) var(--space-lg) 0',
+        boxSizing: 'border-box',
       }}
     >
       {items.map((item) => {
@@ -38,7 +41,7 @@ export function TabBar({ items, activeId, onChange }: TabBarProps) {
               flexDirection: 'column',
               alignItems: 'center',
               gap: 'var(--space-xs)',
-              padding: 'var(--space-sm) var(--space-lg)',
+              padding: 'var(--space-sm) var(--space-md)',
               borderRadius: 'var(--radius-full)',
               backgroundColor: isActive ? 'rgba(200, 197, 192, 0.6)' : 'transparent',
               border: 'none',

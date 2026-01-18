@@ -563,17 +563,20 @@ function FilterPills({
             {option.count !== undefined && option.count > 0 && (
               <span
                 style={{
-                  minWidth: 18,
-                  height: 18,
+                  minWidth: 20,
+                  height: 20,
                   borderRadius: 'var(--radius-full)',
                   backgroundColor: isSelected ? 'rgba(255,255,255,0.25)' : 'var(--color-brand-accent)',
                   color: isSelected ? 'var(--color-text-inverse)' : 'var(--color-text-inverse)',
-                  fontSize: 11,
+                  fontSize: 12,
                   fontWeight: 700,
-                  display: 'flex',
+                  display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  padding: '0 5px',
+                  lineHeight: 1,
+                  paddingLeft: 6,
+                  paddingRight: 6,
+                  boxSizing: 'border-box',
                 }}
               >
                 {option.count}

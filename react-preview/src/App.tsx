@@ -73,6 +73,8 @@ import {
   RecommendationStack,
   // Notification/Message list components
   NotificationListDemo,
+  // iOS Status Bar (from assets)
+  StatusBar,
 } from './components';
 
 import {
@@ -128,6 +130,31 @@ function App() {
         </div>
 
         <div style={{ padding: 'var(--space-xl)', display: 'flex', flexDirection: 'column', gap: 'var(--space-3xl)' }}>
+
+          {/* ============================================ */}
+          {/* iOS STATUS BAR (from assets) */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>iOS Status Bar</SubsectionTitle>
+            <p style={{ fontSize: 13, color: 'var(--color-text-secondary)', marginBottom: 'var(--space-md)' }}>
+              Icons extracted from iPhone 13 Pro Max.svg asset
+            </p>
+            
+            {/* Complete Status Bar - Dark on Light */}
+            <div style={{ marginTop: 'var(--space-md)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', backgroundColor: 'var(--color-bg-secondary)' }}>
+              <StatusBar variant="dark" batteryLevel={100} />
+            </div>
+            
+            {/* Complete Status Bar - Light on Dark */}
+            <div style={{ marginTop: 'var(--space-md)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', backgroundColor: '#1a1a1a' }}>
+              <StatusBar variant="light" batteryLevel={75} />
+            </div>
+            
+            {/* Without Dynamic Island */}
+            <div style={{ marginTop: 'var(--space-md)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', backgroundColor: 'var(--color-bg-secondary)' }}>
+              <StatusBar variant="dark" showDynamicIsland={false} batteryLevel={45} />
+            </div>
+          </section>
 
           {/* ============================================ */}
           {/* AVATARS */}

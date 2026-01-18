@@ -13,6 +13,7 @@ import {
   SegmentedControl,
   SectionHeader,
   Badge,
+  StatusBar,
   globalStyles,
 } from './components';
 
@@ -119,11 +120,16 @@ export function BiomarkerResultsPage() {
       }}
     >
       <style>{globalStyles}</style>
+        {/* iOS Status Bar */}
+        <StatusBar variant="dark" />
+        
         {/* Navigation Header */}
         <NavHeader 
           title="Creatinine" 
           showBack 
+          showClose
           onBack={() => console.log('Navigate back')}
+          onClose={() => console.log('Close')}
           bordered
         />
 

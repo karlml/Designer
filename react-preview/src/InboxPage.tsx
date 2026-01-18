@@ -15,6 +15,7 @@ import {
   Avatar,
   NotificationItem,
   FilledButton,
+  StatusBar,
   globalStyles,
 } from './components';
 
@@ -38,69 +39,6 @@ import {
   Clock,
   Video,
 } from 'lucide-react';
-
-// iOS Status Bar Component
-function IOSStatusBar() {
-  const now = new Date();
-  const timeString = now.toLocaleTimeString('en-US', { 
-    hour: 'numeric', 
-    minute: '2-digit',
-    hour12: true 
-  });
-
-  return (
-    <div
-      style={{
-        height: 54,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '0 var(--space-xl)',
-        backgroundColor: 'var(--color-bg-primary)',
-      }}
-    >
-      {/* Time */}
-      <span style={{ fontSize: 15, fontWeight: 600, color: 'var(--color-text-primary)' }}>
-        {timeString.replace(' ', '')}
-      </span>
-      
-      {/* Dynamic Island */}
-      <div
-        style={{
-          width: 126,
-          height: 37,
-          backgroundColor: '#000',
-          borderRadius: 20,
-        }}
-      />
-      
-      {/* Status Icons */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-xs)' }}>
-        <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
-          <path d="M1 4.5C1 3.67 1.67 3 2.5 3H3.5C4.33 3 5 3.67 5 4.5V10.5C5 11.33 4.33 12 3.5 12H2.5C1.67 12 1 11.33 1 10.5V4.5Z" fill="var(--color-text-primary)"/>
-          <path d="M6 3C6 2.17 6.67 1.5 7.5 1.5H8.5C9.33 1.5 10 2.17 10 3V10.5C10 11.33 9.33 12 8.5 12H7.5C6.67 12 6 11.33 6 10.5V3Z" fill="var(--color-text-primary)"/>
-          <path d="M11 1.5C11 0.67 11.67 0 12.5 0H13.5C14.33 0 15 0.67 15 1.5V10.5C15 11.33 14.33 12 13.5 12H12.5C11.67 12 11 11.33 11 10.5V1.5Z" fill="var(--color-text-primary)"/>
-        </svg>
-        <svg width="17" height="12" viewBox="0 0 17 12" fill="none">
-          <path fillRule="evenodd" clipRule="evenodd" d="M8.5 2.4C5.36 2.4 2.61 3.79 1 6C2.61 8.21 5.36 9.6 8.5 9.6C11.64 9.6 14.39 8.21 16 6C14.39 3.79 11.64 2.4 8.5 2.4Z" stroke="var(--color-text-primary)" strokeWidth="1.2"/>
-        </svg>
-        <div style={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          gap: 2,
-          backgroundColor: 'var(--color-text-primary)',
-          padding: '2px 4px',
-          borderRadius: 3,
-        }}>
-          <span style={{ fontSize: 11, fontWeight: 600, color: 'var(--color-bg-primary)' }}>87</span>
-          <svg width="8" height="12" viewBox="0 0 8 12" fill="var(--color-bg-primary)">
-            <rect x="0" y="0" width="6" height="12" rx="1" fill="var(--color-bg-primary)"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 // Custom Inbox Header - clean and minimal
 function InboxHeader() {
@@ -904,7 +842,7 @@ export function InboxPage() {
     >
       <style>{globalStyles}</style>
       {/* iOS Status Bar */}
-      <IOSStatusBar />
+      <StatusBar variant="dark" batteryLevel={87} />
 
         {/* Inbox Header */}
         <InboxHeader />

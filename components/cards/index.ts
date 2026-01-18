@@ -13,3 +13,12 @@ export { PromoCard } from './PromoCard';
 export { FeatureToggleRow } from './FeatureToggleRow';
 export { AppointmentCard } from './AppointmentCard';
 export { ProductThumbnail } from './ProductThumbnail';
+
+// New medical/health components
+export { CategoryPill, CategoryPillScroll } from './CategoryPill';
+export { BiomarkerListCard } from './BiomarkerListCard';
+export type { BiomarkerStatus } from './BiomarkerListCard';
+export { BiologicalAgeGauge } from './BiologicalAgeGauge';
+export { HealthScoreCard } from './HealthScoreCard';
+export { DoctorAnalysisCard } from './DoctorAnalysisCard';
+export { RecommendationBubble, RecommendationStack } from './RecommendationBubble';

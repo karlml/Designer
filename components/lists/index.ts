@@ -1,5 +1,7 @@
 export { InfoRow } from './InfoRow';
 export { ListItem } from './ListItem';
+export { NotificationItem } from './NotificationItem';
+export { NotificationList } from './NotificationList';
 export { SettingsItem } from './SettingsItem';
 export { SettingsItemEditable } from './SettingsItemEditable';
 export { SettingsItemPlain } from './SettingsItemPlain';

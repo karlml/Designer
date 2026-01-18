@@ -7,7 +7,8 @@
 
 // Theme & Types
 export { styles, globalStyles } from './theme';
-export { CategoryType, categoryColors } from './types';
+export type { CategoryType } from './types';
+export { categoryColors } from './types';
 
 // Foundation / Primitives
 export * from './foundation';

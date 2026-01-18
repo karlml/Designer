@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Edit2 } from 'lucide-react';
-import { CategoryType, categoryColors } from '../types';
+import type { CategoryType } from '../types';
+import { categoryColors } from '../types';
 
 
 interface SelectionCardProps {

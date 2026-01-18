@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import { CategoryType, categoryColors } from '../types';
+import type { CategoryType } from '../types';
+import { categoryColors } from '../types';
 
 
 interface CardProps {

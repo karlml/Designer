@@ -44,6 +44,7 @@ import {
   NavigationHeader,
   ScreenHeader,
   BarChart,
+  DivergingColumnChart,
   StatsCard,
   DeviceStatusIndicator,
   CategoryCard,
@@ -61,6 +62,17 @@ import {
   FeatureToggleRow,
   ProfileHeader,
   globalStyles,
+  // New medical/health components
+  CategoryPill,
+  CategoryPillScroll,
+  BiomarkerListCard,
+  BiologicalAgeGauge,
+  HealthScoreCard,
+  DoctorAnalysisCard,
+  RecommendationBubble,
+  RecommendationStack,
+  // Notification/Message list components
+  NotificationListDemo,
 } from './components';
 
 import {
@@ -75,6 +87,14 @@ import {
   User,
   Settings,
   Fingerprint,
+  Droplets,
+  Pill,
+  Brain,
+  Leaf,
+  Flame,
+  Sparkles,
+  CheckCircle,
+  TrendingDown,
 } from 'lucide-react';
 
 function App() {
@@ -410,6 +430,14 @@ function App() {
           </section>
 
           {/* ============================================ */}
+          {/* NOTIFICATION LIST */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Notification List</SubsectionTitle>
+            <NotificationListDemo />
+          </section>
+
+          {/* ============================================ */}
           {/* METRIC CARD */}
           {/* ============================================ */}
           <section>
@@ -621,6 +649,55 @@ function App() {
                 data={[3200, 5400, 7800, 4200, 8500, 9200, 6800]}
                 labels={['M', 'T', 'W', 'T', 'F', 'S', 'S']}
                 maxValue={10000}
+                height={180}
+              />
+            </Card>
+          </section>
+
+          {/* ============================================ */}
+          {/* DIVERGING COLUMN CHART */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Diverging Column Chart</SubsectionTitle>
+            <Card>
+              {/* Range indicator like in the reference */}
+              <div style={{ marginBottom: 'var(--space-lg)' }}>
+                <div style={{ 
+                  fontSize: 13, 
+                  color: 'var(--color-text-secondary)', 
+                  marginBottom: 'var(--space-xs)' 
+                }}>
+                  Range
+                </div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--space-sm)' }}>
+                  <div style={{ 
+                    width: 8, 
+                    height: 24, 
+                    backgroundColor: 'var(--color-body-text)', 
+                    borderRadius: 2,
+                    opacity: 0.7 
+                  }} />
+                  <span style={{ fontSize: 28, fontWeight: 300 }}>4.2 - 4.6</span>
+                  <span style={{ fontSize: 15, color: 'var(--color-text-secondary)' }}>mEq/L</span>
+                </div>
+                <div style={{ 
+                  fontSize: 13, 
+                  color: 'var(--color-text-tertiary)', 
+                  marginTop: 'var(--space-xs)' 
+                }}>
+                  Jan 2, 2026 - Jan 4, 2027
+                </div>
+              </div>
+              <DivergingColumnChart
+                data={[
+                  { min: -0.3, max: 0.1 },
+                  { min: -0.2, max: 0.05 },
+                  { min: -0.1, max: 0.2 },
+                  { min: 0.1, max: 0.5 },
+                  { min: 0.2, max: 0.8 },
+                ]}
+                xAxisLabels={['2020', '2021', '2022', '2023', '2024']}
+                baseline={0}
                 height={180}
               />
             </Card>
@@ -846,6 +923,201 @@ function App() {
                 <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)' }}>Caption text - Tertiary</p>
               </div>
             </Card>
+          </section>
+
+          {/* ============================================ */}
+          {/* NEW MEDICAL/HEALTH COMPONENTS */}
+          {/* ============================================ */}
+          <div style={{ 
+            marginTop: 'var(--space-3xl)', 
+            paddingTop: 'var(--space-xl)', 
+            borderTop: '2px solid var(--color-brand-accent)' 
+          }}>
+            <PageTitle>Medical & Health Components</PageTitle>
+            <p style={{ color: 'var(--color-text-secondary)', marginBottom: 'var(--space-xl)' }}>
+              New components for health tracking and medical data display
+            </p>
+          </div>
+
+          {/* ============================================ */}
+          {/* CATEGORY PILLS */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Category Pills</SubsectionTitle>
+            <div style={{ marginLeft: 'calc(var(--space-xl) * -1)', marginRight: 'calc(var(--space-xl) * -1)' }}>
+              <CategoryPillScroll>
+                <CategoryPill
+                  icon={<Droplets size={16} />}
+                  label="Blod"
+                  iconBgColor="#FCE4EC"
+                  iconColor="#C75B7A"
+                />
+                <CategoryPill
+                  icon={<Heart size={16} />}
+                  label="Hjerte"
+                  iconBgColor="#FCE4EC"
+                  iconColor="#C75B7A"
+                />
+                <CategoryPill
+                  icon={<Star size={16} />}
+                  label="Hormoner"
+                  iconBgColor="#FEF3C7"
+                  iconColor="#D97706"
+                />
+                <CategoryPill
+                  icon={<Droplets size={16} />}
+                  label="Nyrer"
+                  iconBgColor="#DBEAFE"
+                  iconColor="#3B82F6"
+                />
+                <CategoryPill
+                  icon={<Leaf size={16} />}
+                  label="Lever"
+                  iconBgColor="#D1FAE5"
+                  iconColor="#059669"
+                />
+                <CategoryPill
+                  icon={<Pill size={16} />}
+                  label="Vitaminer"
+                  iconBgColor="#FEF3C7"
+                  iconColor="#D97706"
+                />
+                <CategoryPill
+                  icon={<Flame size={16} />}
+                  label="Metabolisme"
+                  iconBgColor="#FEF3C7"
+                  iconColor="#D97706"
+                />
+                <CategoryPill
+                  icon={<Brain size={16} />}
+                  label="Hjerne"
+                  iconBgColor="#EDE9FE"
+                  iconColor="#7C3AED"
+                />
+              </CategoryPillScroll>
+            </div>
+          </section>
+
+          {/* ============================================ */}
+          {/* BIOMARKER LIST CARD */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Biomarker List Card (Lab Results)</SubsectionTitle>
+            <BiomarkerListCard
+              readings={[
+                { label: 'eGFR - Low Range', value: 4.2, unit: 'mL/min', status: 'in-range', date: 'September 2026', category: 'body' },
+                { label: 'Creatinine', value: 0.64, unit: 'mg/dL', status: 'below-range', date: 'August 2026', category: 'body' },
+                { label: 'eGFR - High Range', value: '>60', unit: 'mL/min', status: 'above-range', date: 'July 2026', category: 'body' },
+                { label: 'Creatinine', value: 0.64, unit: 'mg/dL', status: 'below-range', date: 'August 2026', category: 'body' },
+              ]}
+              separateCards={true}
+            />
+          </section>
+          
+          {/* ============================================ */}
+          {/* BIOMARKER LIST CARD (GROUPED) */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Biomarker List Card (Grouped)</SubsectionTitle>
+            <BiomarkerListCard
+              readings={[
+                { label: 'Vitamin B9 (Folat)', value: 53.5, unit: 'nmol/L', status: 'optimal', date: 'Jan 2026', category: 'body' },
+                { label: 'Vitamin D', value: 202, unit: 'nmol/L', status: 'optimal', date: 'Jan 2026', category: 'body' },
+                { label: 'Magnesium', value: 0.68, unit: 'nmol/L', status: 'normal', date: 'Jan 2026', category: 'heart' },
+              ]}
+              separateCards={false}
+            />
+          </section>
+
+          {/* ============================================ */}
+          {/* BIOLOGICAL AGE GAUGE */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Biological Age Gauge</SubsectionTitle>
+            <BiologicalAgeGauge
+              biologicalAge={27}
+              chronologicalAge={30}
+              label="Biologisk alder"
+              youngerLabel="Yngre"
+              actualLabel="Faktisk alder"
+              olderLabel="Eldre"
+              description="Din biologiske alder er 3 år yngre enn din kronologiske alder basert på prøvesvar fra 28. juni 2024"
+            />
+          </section>
+
+          {/* ============================================ */}
+          {/* HEALTH SCORE CARD - VO2 Max */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Health Score Card (VO2 Max)</SubsectionTitle>
+            <HealthScoreCard
+              label="VO2 maks"
+              value={49.6}
+              badgeText="God"
+              badgeVariant="success"
+              infoText="Du er blant topp 20% i forhold til befolkningen."
+              infoIcon={<Sparkles size={16} />}
+            />
+          </section>
+
+          {/* ============================================ */}
+          {/* HEALTH SCORE CARD - Heart Health */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Health Score Card (Heart Health)</SubsectionTitle>
+            <HealthScoreCard
+              label="Din hjertehelse"
+              value={78}
+              maxValue={100}
+              badgeText="God"
+              badgeVariant="success"
+              showProgress
+              progressValue={78}
+              description="Din hjerte-score er god, noe som indikerer lav risiko for å utvikle hjerte- og karsykdommer innen de neste 10 årene."
+            />
+          </section>
+
+          {/* ============================================ */}
+          {/* DOCTOR ANALYSIS CARD */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Doctor Analysis Card</SubsectionTitle>
+            <DoctorAnalysisCard
+              title="Legeanalyse"
+              date="Legesvar den 23.06.24"
+              authorDescription="Utviklet sammen med Dr. Sol Malm Hagen basert på dine helsedata og helsemål"
+              summaryTitle="Oppsummering"
+              highlightedContent={{
+                text: "Fra dine testresultater... oksygen-opptak (VO2 maks) er et enestående mål på kondisjon og aerob utholdenhet. Muligheten til å se den nåværende",
+                backgroundColor: 'var(--color-brand-primary)',
+                textColor: 'var(--color-text-inverse)',
+              }}
+            />
+          </section>
+
+          {/* ============================================ */}
+          {/* RECOMMENDATION BUBBLES */}
+          {/* ============================================ */}
+          <section>
+            <SubsectionTitle>Recommendation Bubbles</SubsectionTitle>
+            <RecommendationStack>
+              <RecommendationBubble
+                icon={<CheckCircle size={16} />}
+                title="Ta D-vitamin tilskudd om vinteren"
+                description="Vitamin D-nivået ditt er litt lavt, det er veldig vanlig. Jeg anbefaler et tilskudd i vinterhalvåret."
+                backgroundColor="var(--color-success-bg)"
+                iconBgColor="var(--color-bg-secondary)"
+                iconColor="var(--color-success-text)"
+              />
+              <RecommendationBubble
+                icon={<TrendingDown size={16} />}
+                title="Reduser kolesterol med kosthold og aktivitet"
+                description="Kolesterolet ditt ligger litt høyere enn anbefalt, men ikke i en alvorlig grad. Jeg anbefaler at du har fokus på et sunt kosthold og regelmessig fysisk aktivitet."
+                backgroundColor="var(--color-success-bg)"
+                iconBgColor="var(--color-bg-secondary)"
+                iconColor="var(--color-success-text)"
+              />
+            </RecommendationStack>
           </section>
 
         </div>

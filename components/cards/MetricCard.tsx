@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { ChevronRight } from 'lucide-react';
-import { CategoryType, categoryColors } from '../types';
+import type { CategoryType } from '../types';
+import { categoryColors } from '../types';
 import { Card } from '../layout/Card';
 
 

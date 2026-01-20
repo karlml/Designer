@@ -119,10 +119,14 @@ function EmptyPage({ title, icon }: { title: string; icon: React.ReactNode }) {
 export function AppShell() {
   const [activeTab, setActiveTab] = useState<TabId>('home');
 
+  const handleNavigate = (tab: 'coach' | 'clinic') => {
+    setActiveTab(tab);
+  };
+
   const renderContent = () => {
     switch (activeTab) {
       case 'home':
-        return <InboxPage hideTabBar />;
+        return <InboxPage hideTabBar onNavigate={handleNavigate} />;
       case 'coach':
         return <CoachPage hideTabBar />;
       case 'clinic':
@@ -130,11 +134,11 @@ export function AppShell() {
       case 'shop':
         return <ShopPage hideTabBar />;
       case 'inbox':
-        return <InboxPage hideTabBar />;
+        return <InboxPage hideTabBar onNavigate={handleNavigate} />;
       case 'profile':
         return <ProfilePage hideTabBar />;
       default:
-        return <InboxPage hideTabBar />;
+        return <InboxPage hideTabBar onNavigate={handleNavigate} />;
     }
   };
 

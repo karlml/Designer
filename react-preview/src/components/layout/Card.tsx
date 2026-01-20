@@ -26,6 +26,7 @@ export function Card({ children, category = 'default', shadow = false, padding =
     <div
       onClick={onClick}
       style={{
+        position: 'relative',
         backgroundColor: bg,
         color: color,
         borderRadius: 'var(--radius-lg)',

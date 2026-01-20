@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Home, Sparkles, Stethoscope, Bell, User, ShoppingBag } from 'lucide-react';
+import { Home, Dumbbell, Stethoscope, Bell, User, ShoppingBag } from 'lucide-react';
 
 export type TabId = 'home' | 'coach' | 'clinic' | 'inbox' | 'shop' | 'profile';
 
@@ -13,7 +13,7 @@ export interface TabItem {
 // Standard app tabs - use these everywhere for consistency
 export const standardTabItems: TabItem[] = [
   { id: 'home', label: 'Home', icon: <Home size={24} /> },
-  { id: 'coach', label: 'Coach', icon: <Sparkles size={24} /> },
+  { id: 'coach', label: 'Coach', icon: <Dumbbell size={24} /> },
   { id: 'clinic', label: 'Clinic', icon: <Stethoscope size={24} /> },
   { id: 'shop', label: 'Shop', icon: <ShoppingBag size={24} /> },
   { id: 'inbox', label: 'Inbox', icon: <Bell size={24} /> },

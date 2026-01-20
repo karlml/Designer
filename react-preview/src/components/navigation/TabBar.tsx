@@ -1,20 +1,41 @@
 import React, { ReactNode } from 'react';
+import { Home, Sparkles, Stethoscope, Bell, User, ShoppingBag } from 'lucide-react';
 
+export type TabId = 'home' | 'coach' | 'clinic' | 'inbox' | 'shop' | 'profile';
 
-interface TabItem {
-  id: string;
+export interface TabItem {
+  id: TabId;
   label: string;
   icon: ReactNode;
   badge?: number;
 }
 
+// Standard app tabs - use these everywhere for consistency
+export const standardTabItems: TabItem[] = [
+  { id: 'home', label: 'Home', icon: <Home size={24} /> },
+  { id: 'coach', label: 'Coach', icon: <Sparkles size={24} /> },
+  { id: 'clinic', label: 'Clinic', icon: <Stethoscope size={24} /> },
+  { id: 'shop', label: 'Shop', icon: <ShoppingBag size={24} /> },
+  { id: 'inbox', label: 'Inbox', icon: <Bell size={24} /> },
+  { id: 'profile', label: 'Profile', icon: <User size={24} /> },
+];
+
 interface TabBarProps {
-  items: TabItem[];
-  activeId: string;
-  onChange: (id: string) => void;
+  activeId: TabId;
+  onChange: (id: TabId) => void;
+  /** Optional custom items - defaults to standardTabItems */
+  items?: TabItem[];
+  /** Optional badge counts by tab id */
+  badges?: Partial<Record<TabId, number>>;
 }
 
-export function TabBar({ items, activeId, onChange }: TabBarProps) {
+export function TabBar({ activeId, onChange, items = standardTabItems, badges }: TabBarProps) {
+  // Merge badges into items
+  const itemsWithBadges = items.map(item => ({
+    ...item,
+    badge: badges?.[item.id] ?? item.badge,
+  }));
+
   return (
     <div
       style={{
@@ -30,7 +51,7 @@ export function TabBar({ items, activeId, onChange }: TabBarProps) {
         boxSizing: 'border-box',
       }}
     >
-      {items.map((item) => {
+      {itemsWithBadges.map((item) => {
         const isActive = item.id === activeId;
         return (
           <button

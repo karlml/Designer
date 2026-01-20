@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
+import AppShell from './AppShell.tsx'
 import BiomarkerResultsPage from './BiomarkerResultsPage.tsx'
 import InboxPage from './InboxPage.tsx'
 
@@ -81,6 +82,21 @@ function PreviewShell() {
           >
             Biomarker Results
           </NavLink>
+          <NavLink 
+            to="/app"
+            style={({ isActive }) => ({
+              padding: '10px 12px',
+              borderRadius: 8,
+              color: isActive ? '#fff' : '#888',
+              backgroundColor: isActive ? '#333' : 'transparent',
+              textDecoration: 'none',
+              fontSize: 14,
+              fontWeight: 500,
+              transition: 'all 150ms ease',
+            })}
+          >
+            App Shell
+          </NavLink>
           
           <div style={{ 
             marginTop: 'auto', 
@@ -112,8 +128,8 @@ function AppContainer() {
     }}>
       <div 
         style={{ 
-          width: '100%', 
-          maxWidth: 430, 
+          width: 430, 
+          maxWidth: '100%',
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
@@ -121,11 +137,13 @@ function AppContainer() {
           borderRadius: 24,
           overflow: 'auto',
           backgroundColor: '#F7F6F4',
+          flexShrink: 0,
         }}>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/inbox" element={<InboxPage />} />
           <Route path="/biomarker" element={<BiomarkerResultsPage />} />
+          <Route path="/app" element={<AppShell />} />
         </Routes>
       </div>
     </main>

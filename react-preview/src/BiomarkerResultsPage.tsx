@@ -16,12 +16,9 @@ import {
   StatusBar,
   globalStyles,
 } from './components';
+import type { TabId } from './components';
 
 import {
-  Home,
-  Heart,
-  Activity,
-  User,
   FlaskConical,
   TrendingUp,
   Info,
@@ -42,16 +39,13 @@ function FlaskIcon({ color }: { color: string }) {
   );
 }
 
-export function BiomarkerResultsPage() {
-  const [activeTab, setActiveTab] = useState('health');
-  const [selectedPeriod, setSelectedPeriod] = useState('All');
+interface BiomarkerResultsPageProps {
+  hideTabBar?: boolean;
+}
 
-  const tabItems = [
-    { id: 'home', label: 'Home', icon: <Home size={24} /> },
-    { id: 'health', label: 'Health', icon: <Heart size={24} />, badge: 3 },
-    { id: 'activity', label: 'Activity', icon: <Activity size={24} /> },
-    { id: 'profile', label: 'Profile', icon: <User size={24} /> },
-  ];
+export function BiomarkerResultsPage({ hideTabBar = false }: BiomarkerResultsPageProps) {
+  const [activeTab, setActiveTab] = useState<TabId>('clinic');
+  const [selectedPeriod, setSelectedPeriod] = useState('All');
 
   // Historical creatinine data for the diverging column chart
   // Shows deviation from optimal range (0.7-1.2 mg/dL for adults)
@@ -330,12 +324,13 @@ export function BiomarkerResultsPage() {
           </div>
         </div>
 
-      {/* Bottom Tab Bar */}
-      <TabBar
-        items={tabItems}
-        activeId={activeTab}
-        onChange={setActiveTab}
-      />
+      {/* Bottom Tab Bar - uses standardized tabs */}
+      {!hideTabBar && (
+        <TabBar
+          activeId={activeTab}
+          onChange={setActiveTab}
+        />
+      )}
     </div>
   );
 }

@@ -18,21 +18,16 @@ import {
   StatusBar,
   globalStyles,
 } from './components';
+import type { TabId } from './components';
 
 import {
-  Home,
-  Heart,
-  Activity,
-  User,
   Mail,
   Calendar,
-  MessageCircle,
   Bell,
   Sparkles,
   AlertCircle,
   ChevronRight,
   Watch,
-  Settings,
   TrendingUp,
   Award,
   Pill,
@@ -599,16 +594,13 @@ type InboxItem = {
   data: any;
 };
 
-export function InboxPage() {
-  const [activeTab, setActiveTab] = useState('inbox');
-  const [selectedFilter, setSelectedFilter] = useState('all');
+interface InboxPageProps {
+  hideTabBar?: boolean;
+}
 
-  const tabItems = [
-    { id: 'home', label: 'Home', icon: <Home size={24} /> },
-    { id: 'health', label: 'Health', icon: <Heart size={24} /> },
-    { id: 'inbox', label: 'Inbox', icon: <Mail size={24} />, badge: 5 },
-    { id: 'profile', label: 'Profile', icon: <User size={24} /> },
-  ];
+export function InboxPage({ hideTabBar = false }: InboxPageProps) {
+  const [activeTab, setActiveTab] = useState<TabId>('inbox');
+  const [selectedFilter, setSelectedFilter] = useState('all');
 
   // All inbox items in a unified list
   const allItems: InboxItem[] = [
@@ -887,12 +879,13 @@ export function InboxPage() {
           <div style={{ height: 'var(--space-3xl)' }} />
         </div>
 
-      {/* Bottom Tab Bar */}
-      <TabBar
-        items={tabItems}
-        activeId={activeTab}
-        onChange={setActiveTab}
-      />
+      {/* Bottom Tab Bar - uses standardized tabs */}
+      {!hideTabBar && (
+        <TabBar
+          activeId={activeTab}
+          onChange={setActiveTab}
+        />
+      )}
     </div>
   );
 }

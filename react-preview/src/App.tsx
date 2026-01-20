@@ -78,10 +78,6 @@ import {
 } from './components';
 
 import {
-  Home,
-  Star,
-  Users,
-  Bell,
   Plus,
   Activity,
   Heart,
@@ -97,21 +93,17 @@ import {
   Sparkles,
   CheckCircle,
   TrendingDown,
+  Bell,
+  Star,
 } from 'lucide-react';
+import type { TabId } from './components';
 
 function App() {
   const [selectedSegment, setSelectedSegment] = useState('Week');
   const [toggleState, setToggleState] = useState(false);
-  const [activeTab, setActiveTab] = useState('home');
+  const [activeTab, setActiveTab] = useState<TabId>('home');
   const [chatInput, setChatInput] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
-
-  const tabItems = [
-    { id: 'home', label: 'Home', icon: <Home size={24} /> },
-    { id: 'health', label: 'Health', icon: <Heart size={24} />, badge: 2 },
-    { id: 'devices', label: 'Devices', icon: <Star size={24} /> },
-    { id: 'community', label: 'Community', icon: <Users size={24} /> },
-  ];
 
   return (
     <>
@@ -635,13 +627,13 @@ function App() {
             <Card>
               <div style={{ display: 'flex', gap: 'var(--space-md)' }}>
                 <ProductThumbnail>
-                  <span style={{ fontSize: 32 }}>⌚</span>
+                  <img src="/products/Longevity Complex.png" alt="Longevity Complex" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </ProductThumbnail>
                 <ProductThumbnail>
-                  <span style={{ fontSize: 32 }}>⚖️</span>
+                  <img src="/products/Reservatrol.png" alt="Reservatrol" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </ProductThumbnail>
                 <ProductThumbnail>
-                  <span style={{ fontSize: 32 }}>💤</span>
+                  <img src="/products/Omega 3.png" alt="Omega 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </ProductThumbnail>
               </div>
             </Card>
@@ -904,9 +896,11 @@ function App() {
           {/* ============================================ */}
           <section>
             <SubsectionTitle>Tab Bar</SubsectionTitle>
+            <p style={{ fontSize: 13, color: 'var(--color-text-secondary)', marginBottom: 'var(--space-md)' }}>
+              Standardized tabs: Home, Coach, Clinic, Shop, Inbox, Profile
+            </p>
             <div style={{ marginLeft: 'calc(var(--space-xl) * -1)', marginRight: 'calc(var(--space-xl) * -1)' }}>
               <TabBar
-                items={tabItems}
                 activeId={activeTab}
                 onChange={setActiveTab}
               />

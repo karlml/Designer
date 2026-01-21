@@ -23,6 +23,7 @@ import {
   Bell,
 } from 'lucide-react';
 
+import { HomePage } from './HomePage';
 import { InboxPage } from './InboxPage';
 import { BiomarkerResultsPage } from './BiomarkerResultsPage';
 import { ProfilePage } from './ProfilePage';
@@ -126,7 +127,7 @@ export function AppShell() {
   const renderContent = () => {
     switch (activeTab) {
       case 'home':
-        return <InboxPage hideTabBar onNavigate={handleNavigate} />;
+        return <HomePage hideTabBar onNavigate={handleNavigate} />;
       case 'coach':
         return <CoachPage hideTabBar />;
       case 'clinic':
@@ -134,11 +135,11 @@ export function AppShell() {
       case 'shop':
         return <ShopPage hideTabBar />;
       case 'inbox':
-        return <InboxPage hideTabBar onNavigate={handleNavigate} />;
+        return <InboxPage hideTabBar />;
       case 'profile':
         return <ProfilePage hideTabBar />;
       default:
-        return <InboxPage hideTabBar onNavigate={handleNavigate} />;
+        return <HomePage hideTabBar onNavigate={handleNavigate} />;
     }
   };
 
